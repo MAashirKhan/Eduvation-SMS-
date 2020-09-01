@@ -11,3 +11,5 @@ E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsAp
 E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Login.resources
 E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SignUp.resources
+E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Home.resources
+E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sample2.resources

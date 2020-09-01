@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.signup_btn = new System.Windows.Forms.Button();
             this.passwordTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,7 +37,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.datasourceTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.isCB = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.datasourceerrorlabel = new System.Windows.Forms.Label();
+            this.dbserrorlabel = new System.Windows.Forms.Label();
+            this.usernameerrorlabel = new System.Windows.Forms.Label();
+            this.passworderrorlabel = new System.Windows.Forms.Label();
             this.leftpanel.SuspendLayout();
             this.panel6.SuspendLayout();
             this.rightpanel.SuspendLayout();
@@ -50,7 +54,8 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.checkBox1);
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.isCB);
             this.panel6.Controls.Add(this.dbsTxt);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.datasourceTxt);
@@ -60,7 +65,10 @@
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.usernameTxt);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.datasourceerrorlabel);
+            this.panel6.Controls.Add(this.dbserrorlabel);
+            this.panel6.Controls.Add(this.usernameerrorlabel);
+            this.panel6.Controls.Add(this.passworderrorlabel);
             this.panel6.Size = new System.Drawing.Size(342, 623);
             // 
             // rightpanel
@@ -75,18 +83,6 @@
             // 
             this.panel5.Size = new System.Drawing.Size(1132, 69);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 38);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "SignUp";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // signup_btn
             // 
             this.signup_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(194)))), ((int)(((byte)(50)))));
@@ -100,6 +96,7 @@
             this.signup_btn.TabIndex = 5;
             this.signup_btn.Text = "&SIGN UP";
             this.signup_btn.UseVisualStyleBackColor = false;
+            this.signup_btn.Click += new System.EventHandler(this.signup_btn_Click);
             // 
             // passwordTxt
             // 
@@ -109,6 +106,7 @@
             this.passwordTxt.PasswordChar = '•';
             this.passwordTxt.Size = new System.Drawing.Size(297, 31);
             this.passwordTxt.TabIndex = 3;
+            this.passwordTxt.TextChanged += new System.EventHandler(this.passwordTxt_TextChanged);
             // 
             // label3
             // 
@@ -129,6 +127,7 @@
             this.usernameTxt.Name = "usernameTxt";
             this.usernameTxt.Size = new System.Drawing.Size(297, 31);
             this.usernameTxt.TabIndex = 2;
+            this.usernameTxt.TextChanged += new System.EventHandler(this.usernameTxt_TextChanged);
             // 
             // label2
             // 
@@ -148,6 +147,7 @@
             this.dbsTxt.Name = "dbsTxt";
             this.dbsTxt.Size = new System.Drawing.Size(297, 31);
             this.dbsTxt.TabIndex = 1;
+            this.dbsTxt.TextChanged += new System.EventHandler(this.dbsTxt_TextChanged);
             // 
             // label4
             // 
@@ -168,6 +168,7 @@
             this.datasourceTxt.Name = "datasourceTxt";
             this.datasourceTxt.Size = new System.Drawing.Size(297, 31);
             this.datasourceTxt.TabIndex = 0;
+            this.datasourceTxt.TextChanged += new System.EventHandler(this.datasourceTxt_TextChanged);
             // 
             // label5
             // 
@@ -180,25 +181,90 @@
             this.label5.Text = "Data Source";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // checkBox1
+            // isCB
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(20, 471);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(220, 32);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Integrated Security";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.isCB.AutoSize = true;
+            this.isCB.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.isCB.Location = new System.Drawing.Point(20, 471);
+            this.isCB.Name = "isCB";
+            this.isCB.Size = new System.Drawing.Size(220, 32);
+            this.isCB.TabIndex = 4;
+            this.isCB.Text = "Integrated Security";
+            this.isCB.UseVisualStyleBackColor = true;
+            this.isCB.CheckedChanged += new System.EventHandler(this.isCB_CheckedChanged);
             // 
-            // Settings
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(97, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 38);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Sign Up";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // datasourceerrorlabel
+            // 
+            this.datasourceerrorlabel.AutoSize = true;
+            this.datasourceerrorlabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datasourceerrorlabel.ForeColor = System.Drawing.Color.Green;
+            this.datasourceerrorlabel.Location = new System.Drawing.Point(292, 140);
+            this.datasourceerrorlabel.Name = "datasourceerrorlabel";
+            this.datasourceerrorlabel.Size = new System.Drawing.Size(26, 32);
+            this.datasourceerrorlabel.TabIndex = 16;
+            this.datasourceerrorlabel.Text = "*";
+            this.datasourceerrorlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.datasourceerrorlabel.Visible = false;
+            // 
+            // dbserrorlabel
+            // 
+            this.dbserrorlabel.AutoSize = true;
+            this.dbserrorlabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dbserrorlabel.ForeColor = System.Drawing.Color.Green;
+            this.dbserrorlabel.Location = new System.Drawing.Point(291, 221);
+            this.dbserrorlabel.Name = "dbserrorlabel";
+            this.dbserrorlabel.Size = new System.Drawing.Size(26, 32);
+            this.dbserrorlabel.TabIndex = 17;
+            this.dbserrorlabel.Text = "*";
+            this.dbserrorlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dbserrorlabel.Visible = false;
+            // 
+            // usernameerrorlabel
+            // 
+            this.usernameerrorlabel.AutoSize = true;
+            this.usernameerrorlabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameerrorlabel.ForeColor = System.Drawing.Color.Green;
+            this.usernameerrorlabel.Location = new System.Drawing.Point(291, 303);
+            this.usernameerrorlabel.Name = "usernameerrorlabel";
+            this.usernameerrorlabel.Size = new System.Drawing.Size(26, 32);
+            this.usernameerrorlabel.TabIndex = 17;
+            this.usernameerrorlabel.Text = "*";
+            this.usernameerrorlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.usernameerrorlabel.Visible = false;
+            // 
+            // passworderrorlabel
+            // 
+            this.passworderrorlabel.AutoSize = true;
+            this.passworderrorlabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passworderrorlabel.ForeColor = System.Drawing.Color.Green;
+            this.passworderrorlabel.Location = new System.Drawing.Point(291, 386);
+            this.passworderrorlabel.Name = "passworderrorlabel";
+            this.passworderrorlabel.Size = new System.Drawing.Size(26, 32);
+            this.passworderrorlabel.TabIndex = 18;
+            this.passworderrorlabel.Text = "*";
+            this.passworderrorlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.passworderrorlabel.Visible = false;
+            // 
+            // SignUp
             // 
             this.AcceptButton = this.signup_btn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1474, 692);
-            this.Name = "Settings";
-            this.Text = "Settings";
+            this.ControlBox = false;
+            this.Name = "SignUp";
+            this.Text = "SignUp";
             this.leftpanel.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -208,8 +274,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button signup_btn;
         private System.Windows.Forms.TextBox passwordTxt;
         private System.Windows.Forms.Label label3;
@@ -219,6 +283,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox datasourceTxt;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox isCB;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label datasourceerrorlabel;
+        private System.Windows.Forms.Label dbserrorlabel;
+        private System.Windows.Forms.Label usernameerrorlabel;
+        private System.Windows.Forms.Label passworderrorlabel;
     }
 }

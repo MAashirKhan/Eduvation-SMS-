@@ -50,7 +50,6 @@
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.textBox1);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.label1);
             this.panel6.Size = new System.Drawing.Size(342, 623);
             // 
             // rightpanel
@@ -61,7 +60,7 @@
             // 
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.Size = new System.Drawing.Size(1133, 623);
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+
             // 
             // panel5
             // 
@@ -131,6 +130,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "LOGIN";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Login
             // 

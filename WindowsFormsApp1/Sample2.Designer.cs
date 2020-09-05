@@ -37,7 +37,11 @@
             this.add_btn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.search_Txtbox = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.back_btn = new System.Windows.Forms.Button();
             this.leftpanel.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.rightpanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -51,7 +55,13 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.panel2);
             this.panel6.Size = new System.Drawing.Size(342, 658);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.back_btn);
+            this.panel3.Controls.SetChildIndex(this.back_btn, 0);
             // 
             // rightpanel
             // 
@@ -190,6 +200,28 @@
             this.search_Txtbox.TabIndex = 0;
             this.search_Txtbox.TextChanged += new System.EventHandler(this.search_Txtbox_TextChanged);
             // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(342, 73);
+            this.panel2.TabIndex = 0;
+            // 
+            // back_btn
+            // 
+            this.back_btn.BackColor = System.Drawing.Color.Transparent;
+            this.back_btn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.back_btn.FlatAppearance.BorderSize = 0;
+            this.back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.back_btn.Image = global::WindowsFormsApp1.Properties.Resources.back_btn5;
+            this.back_btn.Location = new System.Drawing.Point(0, 0);
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Size = new System.Drawing.Size(63, 69);
+            this.back_btn.TabIndex = 17;
+            this.back_btn.UseVisualStyleBackColor = false;
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            // 
             // Sample2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -197,7 +229,11 @@
             this.ClientSize = new System.Drawing.Size(1492, 727);
             this.ControlBox = false;
             this.Name = "Sample2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.leftpanel.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.rightpanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -219,5 +255,7 @@
         private System.Windows.Forms.Button add_btn;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox search_Txtbox;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button back_btn;
     }
 }

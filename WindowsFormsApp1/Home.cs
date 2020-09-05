@@ -16,5 +16,12 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        MainClass main = new MainClass();
+        private void staff_Btn_Click(object sender, EventArgs e)
+        {
+            Staff st = new Staff();
+            st.WindowState = FormWindowState.Maximized;
+            main.ShowWindow(st, this, MDI.ActiveForm);
+        }
     }
 }

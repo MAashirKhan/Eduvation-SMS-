@@ -47,24 +47,24 @@
             // 
             // leftpanel
             // 
-            this.leftpanel.Size = new System.Drawing.Size(342, 693);
+            this.leftpanel.Size = new System.Drawing.Size(342, 727);
             // 
             // panel6
             // 
-            this.panel6.Size = new System.Drawing.Size(342, 624);
+            this.panel6.Size = new System.Drawing.Size(342, 658);
             // 
             // rightpanel
             // 
-            this.rightpanel.Size = new System.Drawing.Size(1139, 693);
+            this.rightpanel.Size = new System.Drawing.Size(1150, 727);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.panel1);
-            this.panel4.Size = new System.Drawing.Size(1139, 624);
+            this.panel4.Size = new System.Drawing.Size(1150, 658);
             // 
             // panel5
             // 
-            this.panel5.Size = new System.Drawing.Size(1139, 69);
+            this.panel5.Size = new System.Drawing.Size(1150, 69);
             // 
             // panel1
             // 
@@ -72,7 +72,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1139, 76);
+            this.panel1.Size = new System.Drawing.Size(1150, 76);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -95,7 +95,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1139, 76);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1150, 76);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // view_btn
@@ -104,9 +104,9 @@
             this.view_btn.FlatAppearance.BorderSize = 2;
             this.view_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.view_btn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.view_btn.Location = new System.Drawing.Point(759, 3);
+            this.view_btn.Location = new System.Drawing.Point(767, 3);
             this.view_btn.Name = "view_btn";
-            this.view_btn.Size = new System.Drawing.Size(183, 70);
+            this.view_btn.Size = new System.Drawing.Size(185, 70);
             this.view_btn.TabIndex = 4;
             this.view_btn.Text = "VIEW";
             this.view_btn.UseVisualStyleBackColor = true;
@@ -118,9 +118,9 @@
             this.delete_btn.FlatAppearance.BorderSize = 2;
             this.delete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete_btn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delete_btn.Location = new System.Drawing.Point(570, 3);
+            this.delete_btn.Location = new System.Drawing.Point(576, 3);
             this.delete_btn.Name = "delete_btn";
-            this.delete_btn.Size = new System.Drawing.Size(183, 70);
+            this.delete_btn.Size = new System.Drawing.Size(185, 70);
             this.delete_btn.TabIndex = 3;
             this.delete_btn.Text = "DELETE";
             this.delete_btn.UseVisualStyleBackColor = true;
@@ -132,9 +132,9 @@
             this.save_btn.FlatAppearance.BorderSize = 2;
             this.save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save_btn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.save_btn.Location = new System.Drawing.Point(381, 3);
+            this.save_btn.Location = new System.Drawing.Point(385, 3);
             this.save_btn.Name = "save_btn";
-            this.save_btn.Size = new System.Drawing.Size(183, 70);
+            this.save_btn.Size = new System.Drawing.Size(185, 70);
             this.save_btn.TabIndex = 2;
             this.save_btn.Text = "SAVE";
             this.save_btn.UseVisualStyleBackColor = true;
@@ -146,9 +146,9 @@
             this.edit_btn.FlatAppearance.BorderSize = 2;
             this.edit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.edit_btn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edit_btn.Location = new System.Drawing.Point(192, 3);
+            this.edit_btn.Location = new System.Drawing.Point(194, 3);
             this.edit_btn.Name = "edit_btn";
-            this.edit_btn.Size = new System.Drawing.Size(183, 70);
+            this.edit_btn.Size = new System.Drawing.Size(185, 70);
             this.edit_btn.TabIndex = 1;
             this.edit_btn.Text = "EDIT";
             this.edit_btn.UseVisualStyleBackColor = true;
@@ -162,7 +162,7 @@
             this.add_btn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_btn.Location = new System.Drawing.Point(3, 3);
             this.add_btn.Name = "add_btn";
-            this.add_btn.Size = new System.Drawing.Size(183, 70);
+            this.add_btn.Size = new System.Drawing.Size(185, 70);
             this.add_btn.TabIndex = 0;
             this.add_btn.Text = "ADD";
             this.add_btn.UseVisualStyleBackColor = true;
@@ -174,9 +174,9 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.groupBox1.Location = new System.Drawing.Point(948, 3);
+            this.groupBox1.Location = new System.Drawing.Point(958, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(188, 70);
+            this.groupBox1.Size = new System.Drawing.Size(189, 70);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "SEARCH";
@@ -186,7 +186,7 @@
             this.search_Txtbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.search_Txtbox.Location = new System.Drawing.Point(3, 27);
             this.search_Txtbox.Name = "search_Txtbox";
-            this.search_Txtbox.Size = new System.Drawing.Size(182, 31);
+            this.search_Txtbox.Size = new System.Drawing.Size(183, 31);
             this.search_Txtbox.TabIndex = 0;
             this.search_Txtbox.TextChanged += new System.EventHandler(this.search_Txtbox_TextChanged);
             // 
@@ -194,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1481, 693);
+            this.ClientSize = new System.Drawing.Size(1492, 727);
             this.ControlBox = false;
             this.Name = "Sample2";
             this.leftpanel.ResumeLayout(false);

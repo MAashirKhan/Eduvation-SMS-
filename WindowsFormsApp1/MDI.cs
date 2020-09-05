@@ -40,5 +40,10 @@ namespace WindowsFormsApp1
             }
             
         }
+
+        private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

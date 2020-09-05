@@ -1,7 +1,6 @@
 E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
 E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
-E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Eduvation_Management_System.csprojAssemblyReference.cache
 E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MDI.resources
 E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sample.resources
 E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
@@ -28,3 +27,5 @@ E:\OOP Theory\Project\Eduvation\WindowsFormsApp1\obj\Debug\Eduvation_Management_
 E:\OOP Theory\Project\Eduvation\WindowsFormsApp1\obj\Debug\Eduvation_Management_System.csproj.CoreCompileInputs.cache
 E:\OOP Theory\Project\Eduvation\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 E:\OOP Theory\Project\Eduvation\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Staff.resources
+E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Eduvation_Management_System.csprojAssemblyReference.cache

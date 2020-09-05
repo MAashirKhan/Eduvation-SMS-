@@ -17,33 +17,40 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        public void add_btn_Click(object sender, EventArgs e)
+        public virtual void add_btn_Click(object sender, EventArgs e)
         {
 
         }
 
-        public void edit_btn_Click(object sender, EventArgs e)
+        public virtual void edit_btn_Click(object sender, EventArgs e)
         {
 
         }
 
-        public void save_btn_Click(object sender, EventArgs e)
+        public virtual void save_btn_Click(object sender, EventArgs e)
         {
 
         }
 
-        public void delete_btn_Click(object sender, EventArgs e)
+        public virtual void delete_btn_Click(object sender, EventArgs e)
         {
 
         }
 
-        public void view_btn_Click(object sender, EventArgs e)
+        public virtual void view_btn_Click(object sender, EventArgs e)
         {
 
         }
 
-        public void search_Txtbox_TextChanged(object sender, EventArgs e)
+        public virtual void search_Txtbox_TextChanged(object sender, EventArgs e)
         {
+
+        }
+        MainClass main = new MainClass();
+        private void back_btn_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            main.ShowWindow(home, this, MDI.ActiveForm);
 
         }
     }

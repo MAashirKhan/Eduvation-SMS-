@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admissions.Designer.cs">
+      <DependentUpon>Admissions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes.Designer.cs">
+      <DependentUpon>Classes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exams.Designer.cs">
+      <DependentUpon>Exams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fee_Voucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fee_Voucher.Designer.cs">
+      <DependentUpon>Fee_Voucher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +93,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Results.Designer.cs">
+      <DependentUpon>Results.cs</DependentUpon>
     </Compile>
     <Compile Include="Sample.cs">
       <SubType>Form</SubType>
@@ -94,6 +124,27 @@
     <Compile Include="Staff.Designer.cs">
       <DependentUpon>Staff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students.Designer.cs">
+      <DependentUpon>Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subjects.Designer.cs">
+      <DependentUpon>Subjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Time_Table.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Time_Table.Designer.cs">
+      <DependentUpon>Time_Table.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Classes.resx">
+      <DependentUpon>Classes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>

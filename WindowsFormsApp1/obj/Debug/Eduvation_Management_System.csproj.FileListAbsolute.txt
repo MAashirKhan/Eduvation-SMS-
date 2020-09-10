@@ -29,3 +29,20 @@ E:\OOP Theory\Project\Eduvation\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 E:\OOP Theory\Project\Eduvation\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Staff.resources
 E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Eduvation_Management_System.csprojAssemblyReference.cache
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\Eduvation_Management_System.csprojAssemblyReference.cache
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Home.resources
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Login.resources
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MDI.resources
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sample.resources
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sample2.resources
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SignUp.resources
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Staff.resources
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\Eduvation_Management_System.csproj.GenerateResource.cache
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\Eduvation_Management_System.csproj.CoreCompileInputs.cache
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Classes.resources

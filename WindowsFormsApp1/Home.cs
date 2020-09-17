@@ -80,5 +80,11 @@ namespace WindowsFormsApp1
             main.ShowWindow(subj, this, MDI.ActiveForm);
         }
 
+        private void role_Btn_Click(object sender, EventArgs e)
+        {
+            Roles rl = new Roles();
+            rl.WindowState = FormWindowState.Maximized;
+            main.ShowWindow(rl, this, MDI.ActiveForm);
+        }
     }
 }

@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\WindowsFormsApp1",
-    "\\WindowsFormsApp1\\Resources"
+    "\\WindowsFormsApp1\\bin"
   ],
-  "SelectedNode": "\\WindowsFormsApp1\\SignUp.cs",
+  "SelectedNode": "\\WindowsFormsApp1\\MDI.resx",
   "PreviewInSolutionExplorer": false
 }

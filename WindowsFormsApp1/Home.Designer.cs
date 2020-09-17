@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.role_Btn = new System.Windows.Forms.Button();
             this.subjects_Btn = new System.Windows.Forms.Button();
             this.admission_Btn = new System.Windows.Forms.Button();
             this.results_Btn = new System.Windows.Forms.Button();
@@ -79,7 +79,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.role_Btn, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.subjects_Btn, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.admission_Btn, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.results_Btn, 0, 2);
@@ -102,19 +102,20 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(758, 376);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // button1
+            // role_Btn
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(2, 227);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(248, 71);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Results";
-            this.button1.UseVisualStyleBackColor = true;
+            this.role_Btn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.role_Btn.FlatAppearance.BorderSize = 3;
+            this.role_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.role_Btn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.role_Btn.Location = new System.Drawing.Point(2, 227);
+            this.role_Btn.Margin = new System.Windows.Forms.Padding(2);
+            this.role_Btn.Name = "role_Btn";
+            this.role_Btn.Size = new System.Drawing.Size(248, 71);
+            this.role_Btn.TabIndex = 14;
+            this.role_Btn.Text = "Roles";
+            this.role_Btn.UseVisualStyleBackColor = true;
+            this.role_Btn.Click += new System.EventHandler(this.role_Btn_Click);
             // 
             // subjects_Btn
             // 
@@ -293,6 +294,6 @@
         private System.Windows.Forms.Button subjects_Btn;
         private System.Windows.Forms.Button feevoucher_Btn;
         private System.Windows.Forms.Button students_Btn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button role_Btn;
     }
 }

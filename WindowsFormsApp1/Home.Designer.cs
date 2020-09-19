@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.staff_Btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.leftpanel.SuspendLayout();
             this.rightpanel.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -56,17 +56,17 @@
             // 
             // rightpanel
             // 
-            this.rightpanel.Size = new System.Drawing.Size(1137, 693);
+            this.rightpanel.Size = new System.Drawing.Size(1135, 693);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.tableLayoutPanel1);
             this.panel4.Controls.Add(this.panel1);
-            this.panel4.Size = new System.Drawing.Size(1137, 624);
+            this.panel4.Size = new System.Drawing.Size(1135, 624);
             // 
             // panel5
             // 
-            this.panel5.Size = new System.Drawing.Size(1137, 69);
+            this.panel5.Size = new System.Drawing.Size(1135, 69);
             // 
             // tableLayoutPanel1
             // 
@@ -93,8 +93,21 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1137, 579);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1135, 579);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(3, 348);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(372, 109);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Results";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button14
             // 
@@ -102,9 +115,9 @@
             this.button14.FlatAppearance.BorderSize = 3;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(760, 233);
+            this.button14.Location = new System.Drawing.Point(759, 233);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(374, 109);
+            this.button14.Size = new System.Drawing.Size(373, 109);
             this.button14.TabIndex = 13;
             this.button14.Text = "Subjects";
             this.button14.UseVisualStyleBackColor = true;
@@ -117,7 +130,7 @@
             this.button12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.Location = new System.Drawing.Point(381, 233);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(373, 109);
+            this.button12.Size = new System.Drawing.Size(372, 109);
             this.button12.TabIndex = 11;
             this.button12.Text = "Admissions";
             this.button12.UseVisualStyleBackColor = true;
@@ -141,9 +154,9 @@
             this.button9.FlatAppearance.BorderSize = 3;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(760, 118);
+            this.button9.Location = new System.Drawing.Point(759, 118);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(374, 109);
+            this.button9.Size = new System.Drawing.Size(373, 109);
             this.button9.TabIndex = 8;
             this.button9.Text = "Fee Voucher";
             this.button9.UseVisualStyleBackColor = true;
@@ -156,7 +169,7 @@
             this.button7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(381, 118);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(373, 109);
+            this.button7.Size = new System.Drawing.Size(372, 109);
             this.button7.TabIndex = 6;
             this.button7.Text = "TimeTable";
             this.button7.UseVisualStyleBackColor = true;
@@ -180,9 +193,9 @@
             this.button4.FlatAppearance.BorderSize = 3;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(760, 3);
+            this.button4.Location = new System.Drawing.Point(759, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(374, 109);
+            this.button4.Size = new System.Drawing.Size(373, 109);
             this.button4.TabIndex = 3;
             this.button4.Text = "Students";
             this.button4.UseVisualStyleBackColor = true;
@@ -195,7 +208,7 @@
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(381, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(373, 109);
+            this.button2.Size = new System.Drawing.Size(372, 109);
             this.button2.TabIndex = 1;
             this.button2.Text = "Classes";
             this.button2.UseVisualStyleBackColor = true;
@@ -219,21 +232,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1137, 45);
+            this.panel1.Size = new System.Drawing.Size(1135, 45);
             this.panel1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 348);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(372, 109);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Results";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Home
             // 

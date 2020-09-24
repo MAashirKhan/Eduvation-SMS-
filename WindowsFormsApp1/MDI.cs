@@ -18,12 +18,11 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        MainClass main = new MainClass();
 
         private void MDI_Load(object sender, EventArgs e)
         {
            
-            if (File.Exists(main.path+"\\eduvation"))
+            if (File.Exists(MainClass.path+"\\eduvation"))
             {
                 Login obj = new Login();
                 obj.MdiParent = this;

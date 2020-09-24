@@ -10,13 +10,13 @@ namespace WindowsFormsApp1
     // Class For Get the path of the Folder
     class MainClass
     {
-      public string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+      public static string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
         // Method For Open and Close Form Window you have to give three parameters here
         // Opening Win , Closing Win and Parent Win which we also called MDI
 
 
-        public void ShowWindow(Form openWin, Form closeWin, Form MDI)
+        public static void ShowWindow(Form openWin, Form closeWin, Form MDI)
         {
             closeWin.Close();
             openWin.WindowState = FormWindowState.Maximized;
@@ -24,6 +24,214 @@ namespace WindowsFormsApp1
             openWin.Show();
         }
 
+        // Method For Showing Message Box instead of using default method of Message box we create
+        // method where we just pass the caption, message, and type
+
+        public static DialogResult MSGBox(string msg, string caption, string type)
+        {
+            if (type == "Success") // If the message result is success we return this
+            {
+                return MessageBox.Show(msg, caption, MessageBoxButtons.OK, MessageBoxIcon.Information );
+            }
+            else  // If the message result is error then return this
+            {
+                return MessageBox.Show(msg, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //Disable Method
+
+        // Method for Reset Disable so here we pass a container or panel so all the control in that 
+        // container is reset and disable.
+
+        public static void reset_disable(Panel panel) // panel means that container
+        {
+            foreach (Control c in panel.Controls)
+            {
+                if (c is TextBox)
+                {
+                    TextBox t = (TextBox)c;
+                    t.Enabled = false;
+                    t.Text = "";
+                }
+                if (c is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)c;
+                    comboBox.Enabled = false;
+                    comboBox.SelectedIndex = -1;
+                }
+                if (c is RadioButton)
+                {
+                    RadioButton radioButton = (RadioButton)c;
+                    radioButton.Enabled = false;
+                    radioButton.Checked = false;
+                }
+                if (c is CheckBox)
+                {
+                    CheckBox checkBox = (CheckBox)c;
+                    checkBox.Enabled = false;
+                    checkBox.Checked = false;
+                }
+                if (c is DateTimePicker)
+                {
+                    DateTimePicker dateTimePicker = (DateTimePicker)c;
+                    dateTimePicker.Enabled = false;
+                    dateTimePicker.Value = DateTime.Now;
+                }
+            }
+        }
+
+        //Now we create method for the Disable where we pass the container or panel as an argument
+        //Container is Diable
+
+        public static void Disable(Panel panel) // panel means that container
+        {
+            foreach (Control c in panel.Controls)
+            {
+                if (c is TextBox)
+                {
+                    TextBox t = (TextBox)c;
+                    t.Enabled = false;
+                }
+                if (c is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)c;
+                    comboBox.Enabled = false;
+                }
+                if (c is RadioButton)
+                {
+                    RadioButton radioButton = (RadioButton)c;
+                    radioButton.Enabled = false;
+                  
+                }
+                if (c is CheckBox)
+                {
+                    CheckBox checkBox = (CheckBox)c;
+                    checkBox.Enabled = false;
+                }
+                if (c is DateTimePicker)
+                {
+                    DateTimePicker dateTimePicker = (DateTimePicker)c;
+                    dateTimePicker.Enabled = false;
+                }
+            }
+        }
+
+        //Enable Method
+
+        // Method for Reset & Enable so here we pass a container or panel so all the control in that 
+        // container is reset and enable.
+
+        public static void reset_enable(Panel panel) // panel means that container
+        {
+            foreach (Control c in panel.Controls)
+            {
+                if (c is TextBox)
+                {
+                    TextBox t = (TextBox)c;
+                    t.Enabled = true;
+                    t.Text = "";
+                }
+                if (c is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)c;
+                    comboBox.Enabled = true;
+                    comboBox.SelectedIndex = -1;
+                }
+                if (c is RadioButton)
+                {
+                    RadioButton radioButton = (RadioButton)c;
+                    radioButton.Enabled = true;
+                    radioButton.Checked = false;
+                }
+                if (c is CheckBox)
+                {
+                    CheckBox checkBox = (CheckBox)c;
+                    checkBox.Enabled = true;
+                    checkBox.Checked = false;
+                }
+                if (c is DateTimePicker)
+                {
+                    DateTimePicker dateTimePicker = (DateTimePicker)c;
+                    dateTimePicker.Enabled = true;
+                    dateTimePicker.Value = DateTime.Now;
+                }
+            }
+        }
+
+        public static void reset_enable(GroupBox groupBox) // Enable reset With groupbox as parameter 
+        {
+            foreach (Control c in groupBox.Controls)
+            {
+                if (c is TextBox)
+                {
+                    TextBox t = (TextBox)c;
+                    t.Enabled = true;
+                    t.Text = "";
+                }
+                if (c is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)c;
+                    comboBox.Enabled = true;
+                    comboBox.SelectedIndex = -1;
+                }
+                if (c is RadioButton)
+                {
+                    RadioButton radioButton = (RadioButton)c;
+                    radioButton.Enabled = true;
+                    radioButton.Checked = false;
+                }
+                if (c is CheckBox)
+                {
+                    CheckBox checkBox = (CheckBox)c;
+                    checkBox.Enabled = true;
+                    checkBox.Checked = false;
+                }
+                if (c is DateTimePicker)
+                {
+                    DateTimePicker dateTimePicker = (DateTimePicker)c;
+                    dateTimePicker.Enabled = true;
+                    dateTimePicker.Value = DateTime.Now;
+                }
+            }
+        }
+
+        //Now we create method for the Enable where we pass the container or panel as an argument
+        //Container is Enable
+
+        public static void Enable(Panel panel) // panel means that container
+        {
+            foreach (Control c in panel.Controls)
+            {
+                if (c is TextBox)
+                {
+                    TextBox t = (TextBox)c;
+                    t.Enabled = true;
+                }
+                if (c is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)c;
+                    comboBox.Enabled = true;
+                }
+                if (c is RadioButton)
+                {
+                    RadioButton radioButton = (RadioButton)c;
+                    radioButton.Enabled = true;
+
+                }
+                if (c is CheckBox)
+                {
+                    CheckBox checkBox = (CheckBox)c;
+                    checkBox.Enabled = true;
+                }
+                if (c is DateTimePicker)
+                {
+                    DateTimePicker dateTimePicker = (DateTimePicker)c;
+                    dateTimePicker.Enabled = true;
+                }
+            }
+        }
+
     }
-    
+
 }

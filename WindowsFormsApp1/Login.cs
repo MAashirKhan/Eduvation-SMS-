@@ -17,12 +17,10 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        MainClass main = new MainClass();
-
         private void login_btn_Click(object sender, EventArgs e)
         {
             Home home = new Home();
-            main.ShowWindow(home, this, MDI.ActiveForm);
+            MainClass.ShowWindow(home, this, MDI.ActiveForm);
         }
     }
 }

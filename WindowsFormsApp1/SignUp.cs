@@ -17,9 +17,6 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        //Call path from MainClass 
-        MainClass main = new MainClass();
-
         //Query accross the signup to check that all fields must filled.
 
         //String Builder
@@ -38,13 +35,13 @@ namespace WindowsFormsApp1
                 else
                 {
                     sb.Append("DataSource= "+datasourceTxt+"; Initial Catalog= "+dbsTxt+"; Integrated Security= true; MultipleActiveResultSets=true");
-                    File.WriteAllText(main.path+"\\eduvation", sb.ToString());
+                    File.WriteAllText(MainClass.path+"\\eduvation", sb.ToString());
                     DialogResult dr = MessageBox.Show("Sign Up Successfully!", "Success", MessageBoxButtons.OK,MessageBoxIcon.Information);
 
                     if(dr == DialogResult.OK)
                     {
                         Login Log = new Login();
-                        main.ShowWindow(Log, this, MDI.ActiveForm);
+                        MainClass.ShowWindow(Log, this, MDI.ActiveForm);
                     }
 
                 }
@@ -62,12 +59,12 @@ namespace WindowsFormsApp1
                 else
                 {
                     sb.Append("DataSource= " + datasourceTxt.Text + "; Initial Catalog= " + dbsTxt.Text +"; User ID= "+usernameTxt.Text +"; Password= "+passwordTxt.Text +"; MultipleActiveResultSets=true");
-                    File.WriteAllText(main.path + "\\eduvation", sb.ToString());
+                    File.WriteAllText(MainClass.path + "\\eduvation", sb.ToString());
                     DialogResult dr = MessageBox.Show("Sign Up Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (dr == DialogResult.OK)
                     {
                         Login Log = new Login();
-                        main.ShowWindow(Log, this, MDI.ActiveForm);
+                        MainClass.ShowWindow(Log, this, MDI.ActiveForm);
                     }
                 }
             }

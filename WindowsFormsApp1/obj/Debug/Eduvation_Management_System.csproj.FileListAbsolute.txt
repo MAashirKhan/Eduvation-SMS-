@@ -46,3 +46,5 @@ D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\Eduvation_M
 D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Classes.resources
+E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Classes.resources
+E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Roles.resources

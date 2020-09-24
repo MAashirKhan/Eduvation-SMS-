@@ -31,10 +31,10 @@
             this.leftpanel = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.rightpanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.leftpanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.rightpanel.SuspendLayout();
@@ -49,15 +49,15 @@
             this.leftpanel.ForeColor = System.Drawing.Color.White;
             this.leftpanel.Location = new System.Drawing.Point(0, 0);
             this.leftpanel.Name = "leftpanel";
-            this.leftpanel.Size = new System.Drawing.Size(342, 687);
+            this.leftpanel.Size = new System.Drawing.Size(342, 721);
             this.leftpanel.TabIndex = 0;
             // 
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 69);
+            this.panel6.Location = new System.Drawing.Point(0, 72);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(342, 618);
+            this.panel6.Size = new System.Drawing.Size(342, 649);
             this.panel6.TabIndex = 1;
             // 
             // panel3
@@ -66,8 +66,19 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(342, 69);
+            this.panel3.Size = new System.Drawing.Size(342, 72);
             this.panel3.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(129, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(213, 72);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Welcome";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rightpanel
             // 
@@ -76,15 +87,15 @@
             this.rightpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rightpanel.Location = new System.Drawing.Point(342, 0);
             this.rightpanel.Name = "rightpanel";
-            this.rightpanel.Size = new System.Drawing.Size(1128, 687);
+            this.rightpanel.Size = new System.Drawing.Size(1128, 721);
             this.rightpanel.TabIndex = 1;
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 69);
+            this.panel4.Location = new System.Drawing.Point(0, 72);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1128, 618);
+            this.panel4.Size = new System.Drawing.Size(1128, 649);
             this.panel4.TabIndex = 1;
             // 
             // panel5
@@ -92,27 +103,18 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1128, 69);
+            this.panel5.Size = new System.Drawing.Size(1128, 72);
             this.panel5.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(129, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 69);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Welcome";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Sample
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1470, 687);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1470, 721);
             this.Controls.Add(this.rightpanel);
             this.Controls.Add(this.leftpanel);
+            this.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Sample";
             this.leftpanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

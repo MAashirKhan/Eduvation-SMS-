@@ -48,3 +48,21 @@ D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsForm
 D:\mydata\Documents\GitHub\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Classes.resources
 E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Classes.resources
 E:\OOP Theory\Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Roles.resources
+D:\Eduvation-SMS-\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Eduvation-SMS-\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Eduvation-SMS-\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\Eduvation_Management_System.csprojAssemblyReference.cache
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Classes.resources
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Home.resources
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Login.resources
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MDI.resources
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Roles.resources
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sample.resources
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sample2.resources
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SignUp.resources
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Staff.resources
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\Eduvation_Management_System.csproj.GenerateResource.cache
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\Eduvation_Management_System.csproj.CoreCompileInputs.cache
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

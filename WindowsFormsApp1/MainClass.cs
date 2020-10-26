@@ -78,6 +78,11 @@ namespace WindowsFormsApp1
                     dateTimePicker.Enabled = false;
                     dateTimePicker.Value = DateTime.Now;
                 }
+                if (c is Button)
+                {
+                    Button button = (Button)c;
+                    button.Enabled = false;
+                }
             }
         }
 
@@ -113,6 +118,11 @@ namespace WindowsFormsApp1
                 {
                     DateTimePicker dateTimePicker = (DateTimePicker)c;
                     dateTimePicker.Enabled = false;
+                }
+                if (c is Button)
+                {
+                    Button button = (Button)c;
+                    button.Enabled = false;
                 }
             }
         }
@@ -156,6 +166,11 @@ namespace WindowsFormsApp1
                     dateTimePicker.Enabled = true;
                     dateTimePicker.Value = DateTime.Now;
                 }
+                if (c is Button)
+                {
+                    Button button = (Button)c;
+                    button.Enabled = true;
+                }
             }
         }
 
@@ -193,6 +208,11 @@ namespace WindowsFormsApp1
                     dateTimePicker.Enabled = true;
                     dateTimePicker.Value = DateTime.Now;
                 }
+                if (c is Button)
+                {
+                    Button button = (Button)c;
+                    button.Enabled = true;
+                }
             }
         }
 
@@ -228,6 +248,11 @@ namespace WindowsFormsApp1
                 {
                     DateTimePicker dateTimePicker = (DateTimePicker)c;
                     dateTimePicker.Enabled = true;
+                }
+                if (c is Button)
+                {
+                    Button button = (Button)c;
+                    button.Enabled = true;
                 }
             }
         }

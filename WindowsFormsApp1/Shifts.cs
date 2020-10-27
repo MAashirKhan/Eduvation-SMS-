@@ -10,20 +10,26 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Subjects : Sample2
+    public partial class Shifts : Sample2
     {
-        public Subjects()
+        public Shifts()
         {
             InitializeComponent();
         }
 
-        private void subjectNameTxt_TextChanged(object sender, EventArgs e)
+        private void shiftNameTxt_TextChanged(object sender, EventArgs e)
         {
-            if (subjectNameTxt.Text == "") { subjectnameerror_Label.Visible = true; } else { subjectnameerror_Label.Visible = false;}
+            if (shiftNameTxt.Text == "") { shiftnameerror_Label.Visible = true; } else { shiftnameerror_Label.Visible = false; }
         }
+
+        private void shiftslotsDD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (shiftslotsDD.SelectedIndex == -1) { shiftsloterror_label.Visible = true; } else { shiftsloterror_label.Visible = false; }
+        }
+
         /*Here we will declare a variable edit it has default value
-          0 but whenever we click on edit button and select any of row it will enable
-          the controls and show that particular data for edit.*/
+         0 but whenever we click on edit button and select any of row it will enable
+        the controls and show that particular data for edit.*/
         int edit = 0;
         //Here We override the methods from sample 2 form
         public override void add_btn_Click(object sender, EventArgs e)
@@ -40,10 +46,11 @@ namespace WindowsFormsApp1
 
         public override void save_btn_Click(object sender, EventArgs e)
         {
-            if (subjectNameTxt.Text == "") { subjectnameerror_Label.Visible = true; } else { subjectnameerror_Label.Visible = false; }
+            if (shiftNameTxt.Text == "") { shiftnameerror_Label.Visible = true; } else { shiftnameerror_Label.Visible = false; }
+            if (shiftslotsDD.SelectedIndex == -1) { shiftsloterror_label.Visible = true; } else { shiftsloterror_label.Visible = false; }
 
             //Now We made a condition if any of error label is visible it will show a message dialog
-            if (subjectnameerror_Label.Visible)
+            if (shiftnameerror_Label.Visible || shiftsloterror_label.Visible)
             {
                 MainClass.MSGBox("Fields with * are mandatory", "ERROR!!", "Error");
             }
@@ -75,7 +82,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void Subjects_Load(object sender, EventArgs e)
+        private void Shifts_Load(object sender, EventArgs e)
         {
             MainClass.reset_disable(panel6);
         }

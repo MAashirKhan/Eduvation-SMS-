@@ -274,7 +274,7 @@
             // usernameTxt
             // 
             this.usernameTxt.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTxt.Location = new System.Drawing.Point(13, 89);
+            this.usernameTxt.Location = new System.Drawing.Point(13, 93);
             this.usernameTxt.MaxLength = 40;
             this.usernameTxt.Name = "usernameTxt";
             this.usernameTxt.Size = new System.Drawing.Size(300, 29);

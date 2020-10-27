@@ -170,6 +170,7 @@
             // role_textBox
             // 
             this.role_textBox.Location = new System.Drawing.Point(27, 141);
+            this.role_textBox.MaxLength = 50;
             this.role_textBox.Name = "role_textBox";
             this.role_textBox.Size = new System.Drawing.Size(291, 29);
             this.role_textBox.TabIndex = 2;
@@ -229,6 +230,7 @@
             this.ClientSize = new System.Drawing.Size(1566, 740);
             this.Name = "Roles";
             this.Text = "Roles";
+            this.Load += new System.EventHandler(this.Roles_Load);
             this.leftpanel.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();

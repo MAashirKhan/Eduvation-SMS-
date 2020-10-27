@@ -82,5 +82,17 @@ namespace WindowsFormsApp1
             Section section = new Section();
             MainClass.ShowWindow(section, this, MDI.ActiveForm);
         }
+
+        private void classTime_Btn_Click(object sender, EventArgs e)
+        {
+            ClassTimings timings = new ClassTimings();
+            MainClass.ShowWindow(timings, this, MDI.ActiveForm);
+        }
+
+        private void Shifts_Btn_Click(object sender, EventArgs e)
+        {
+            Shifts shift = new Shifts();
+            MainClass.ShowWindow(shift, this, MDI.ActiveForm);
+        }
     }
 }

@@ -58,6 +58,12 @@
     <Compile Include="Classes.Designer.cs">
       <DependentUpon>Classes.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassTimings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTimings.Designer.cs">
+      <DependentUpon>ClassTimings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Delete.cs" />
     <Compile Include="Exams.cs">
       <SubType>Form</SubType>
@@ -129,6 +135,12 @@
     <Compile Include="Section.Designer.cs">
       <DependentUpon>Section.cs</DependentUpon>
     </Compile>
+    <Compile Include="Shifts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shifts.Designer.cs">
+      <DependentUpon>Shifts.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +175,9 @@
     <EmbeddedResource Include="Classes.resx">
       <DependentUpon>Classes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClassTimings.resx">
+      <DependentUpon>ClassTimings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,11 +204,17 @@
     <EmbeddedResource Include="Section.resx">
       <DependentUpon>Section.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Shifts.resx">
+      <DependentUpon>Shifts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subjects.resx">
+      <DependentUpon>Subjects.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

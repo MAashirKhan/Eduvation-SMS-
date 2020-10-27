@@ -42,20 +42,47 @@ namespace WindowsFormsApp1
         }
 
 
+        /*Here we will declare a variable edit it has default value
+           0 but whenever we click on edit button and select any of row it will enable
+           the controls and show that particular data for edit.*/
+        int edit = 0;
         //Override the methods for search, add, edit, delete and view 
         // We use the overriding concept so we can use these button according to specific page requirement
+        //Here We override the methods from sample 2 form
         public override void add_btn_Click(object sender, EventArgs e)
         {
-
+            MainClass.reset_enable(panel6);
+            edit = 0;
         }
 
         public override void edit_btn_Click(object sender, EventArgs e)
         {
-
+            edit = 1;
+            MainClass.Enable(panel6);
         }
+
 
         public override void save_btn_Click(object sender, EventArgs e)
         {
+            if (role_textBox.Text == ""){ roleerrorlabel.Visible = true;} else{roleerrorlabel.Visible = false;}
+            if (statusDD.SelectedIndex == -1) { rolestatuserrorlabel.Visible = true; } else { rolestatuserrorlabel.Visible = false; }
+
+            //Now We made a condition if any of error label is visible it will show a message dialog
+            if (roleerrorlabel.Visible || rolestatuserrorlabel.Visible)
+            {
+                MainClass.MSGBox("Fields with * are mandatory", "ERROR!!", "Error");
+            }
+            else
+            {
+                if (edit == 0) //Code For SAVE 
+                {
+
+                }
+                else if (edit == 1) //Code For UPDATE
+                {
+
+                }
+            }
 
         }
 
@@ -72,6 +99,11 @@ namespace WindowsFormsApp1
         public override void search_Txtbox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Roles_Load(object sender, EventArgs e)
+        {
+            MainClass.reset_disable(panel6);
         }
     }
 }

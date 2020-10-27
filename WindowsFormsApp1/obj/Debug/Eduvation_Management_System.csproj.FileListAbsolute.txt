@@ -67,3 +67,6 @@ D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\Eduvation_Management_System.csproj.
 D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Section.resources
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Subjects.resources
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ClassTimings.resources
+D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Shifts.resources

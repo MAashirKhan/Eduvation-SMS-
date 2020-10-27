@@ -63,6 +63,16 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.snoGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsernameGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PasswordGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPasswordGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhoneGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GenderGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoleGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ImgGV = new System.Windows.Forms.DataGridViewImageColumn();
             this.leftpanel.SuspendLayout();
             this.panel6.SuspendLayout();
             this.rightpanel.SuspendLayout();
@@ -497,7 +507,17 @@
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.snoGV});
+            this.snoGV,
+            this.userIDGV,
+            this.NameGV,
+            this.UsernameGV,
+            this.PasswordGV,
+            this.CPasswordGV,
+            this.PhoneGV,
+            this.GenderGV,
+            this.RoleGV,
+            this.StatusGV,
+            this.ImgGV});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 30);
             this.dataGridView1.Name = "dataGridView1";
@@ -516,6 +536,79 @@
             this.snoGV.Name = "snoGV";
             this.snoGV.ReadOnly = true;
             this.snoGV.Width = 89;
+            // 
+            // userIDGV
+            // 
+            this.userIDGV.HeaderText = "User ID";
+            this.userIDGV.MinimumWidth = 8;
+            this.userIDGV.Name = "userIDGV";
+            this.userIDGV.ReadOnly = true;
+            this.userIDGV.Visible = false;
+            // 
+            // NameGV
+            // 
+            this.NameGV.HeaderText = "Name";
+            this.NameGV.MinimumWidth = 8;
+            this.NameGV.Name = "NameGV";
+            this.NameGV.ReadOnly = true;
+            // 
+            // UsernameGV
+            // 
+            this.UsernameGV.HeaderText = "User Name";
+            this.UsernameGV.MinimumWidth = 8;
+            this.UsernameGV.Name = "UsernameGV";
+            this.UsernameGV.ReadOnly = true;
+            // 
+            // PasswordGV
+            // 
+            this.PasswordGV.HeaderText = "Pswd";
+            this.PasswordGV.MinimumWidth = 8;
+            this.PasswordGV.Name = "PasswordGV";
+            this.PasswordGV.ReadOnly = true;
+            this.PasswordGV.Visible = false;
+            // 
+            // CPasswordGV
+            // 
+            this.CPasswordGV.HeaderText = "CPswd";
+            this.CPasswordGV.MinimumWidth = 8;
+            this.CPasswordGV.Name = "CPasswordGV";
+            this.CPasswordGV.ReadOnly = true;
+            this.CPasswordGV.Visible = false;
+            // 
+            // PhoneGV
+            // 
+            this.PhoneGV.HeaderText = "Phone";
+            this.PhoneGV.MinimumWidth = 8;
+            this.PhoneGV.Name = "PhoneGV";
+            this.PhoneGV.ReadOnly = true;
+            // 
+            // GenderGV
+            // 
+            this.GenderGV.HeaderText = "Gender";
+            this.GenderGV.MinimumWidth = 8;
+            this.GenderGV.Name = "GenderGV";
+            this.GenderGV.ReadOnly = true;
+            // 
+            // RoleGV
+            // 
+            this.RoleGV.HeaderText = "Role";
+            this.RoleGV.MinimumWidth = 8;
+            this.RoleGV.Name = "RoleGV";
+            this.RoleGV.ReadOnly = true;
+            // 
+            // StatusGV
+            // 
+            this.StatusGV.HeaderText = "Status";
+            this.StatusGV.MinimumWidth = 8;
+            this.StatusGV.Name = "StatusGV";
+            this.StatusGV.ReadOnly = true;
+            // 
+            // ImgGV
+            // 
+            this.ImgGV.HeaderText = "Image";
+            this.ImgGV.MinimumWidth = 8;
+            this.ImgGV.Name = "ImgGV";
+            this.ImgGV.ReadOnly = true;
             // 
             // Staff
             // 
@@ -574,5 +667,15 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn snoGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userIDGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UsernameGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PasswordGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPasswordGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GenderGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoleGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StatusGV;
+        private System.Windows.Forms.DataGridViewImageColumn ImgGV;
     }
 }

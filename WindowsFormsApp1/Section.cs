@@ -10,23 +10,22 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Classes : Sample2
+    public partial class Section : Sample2
     {
-        public Classes()
+        public Section()
         {
             InitializeComponent();
         }
 
-        private void standardNameTxt_TextChanged(object sender, EventArgs e)
+        private void sectionNameTxt_TextChanged(object sender, EventArgs e)
         {
-            if (standardNameTxt.Text == "") { standardnameerror_Label.Visible = true; } else { standardnameerror_Label.Visible = false; }
+            if (sectionNameTxt.Text == "") { sectionnameerror_Label.Visible = true; } else { sectionnameerror_Label.Visible = false; }
         }
 
-        private void sectionDD_SelectedIndexChanged(object sender, EventArgs e)
+        private void statusDD_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (sectionDD.SelectedIndex == -1) { sectionerror_label.Visible = true; } else { sectionerror_label.Visible = false; }
+            if (statusDD.SelectedIndex == -1) { statuserror_label.Visible = true; } else { statuserror_label.Visible = false; }
         }
-
 
         /*Here we will declare a variable edit it has default value
           0 but whenever we click on edit button and select any of row it will enable
@@ -47,11 +46,11 @@ namespace WindowsFormsApp1
 
         public override void save_btn_Click(object sender, EventArgs e)
         {
-            if (standardNameTxt.Text == "") { standardnameerror_Label.Visible = true; } else { standardnameerror_Label.Visible = false; }
-            if (sectionDD.SelectedIndex == -1) { sectionerror_label.Visible = true; } else { sectionerror_label.Visible = false; }
+            if (sectionNameTxt.Text == "") { sectionnameerror_Label.Visible = true; } else { sectionnameerror_Label.Visible = false; }
+            if (statusDD.SelectedIndex == -1) { statuserror_label.Visible = true; } else { statuserror_label.Visible = false; }
 
             //Now We made a condition if any of error label is visible it will show a message dialog
-            if (standardnameerror_Label.Visible || sectionerror_label.Visible)
+            if (sectionnameerror_Label.Visible || statuserror_label.Visible )
             {
                 MainClass.MSGBox("Fields with * are mandatory", "ERROR!!", "Error");
             }
@@ -83,7 +82,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void Classes_Load(object sender, EventArgs e)
+        private void Section_Load(object sender, EventArgs e)
         {
             MainClass.reset_disable(panel6);
         }

@@ -76,5 +76,11 @@ namespace WindowsFormsApp1
             Roles rl = new Roles();
             MainClass.ShowWindow(rl, this, MDI.ActiveForm);
         }
+
+        private void section_Btn_Click(object sender, EventArgs e)
+        {
+            Section section = new Section();
+            MainClass.ShowWindow(section, this, MDI.ActiveForm);
+        }
     }
 }

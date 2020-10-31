@@ -230,7 +230,6 @@
             this.ControlBox = false;
             this.Name = "Sample2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.leftpanel.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

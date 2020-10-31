@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Eduvation SMS" Class="eduvationdbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-KQBH18B\SQLEXPRESS;Initial Catalog=&quot;Eduvation SMS&quot;;User ID=eduvation" SettingsObjectName="WindowsFormsApp1.Properties.Settings" SettingsPropertyName="Eduvation_SMSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.role" Member="roles">
+    <Type Name="role">
+      <Column Name="rl_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="rl_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="rl_status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.staff_insertRoles" Method="staff_insertRoles">
+    <Parameter Name="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="status" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

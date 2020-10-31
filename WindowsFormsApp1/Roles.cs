@@ -76,7 +76,26 @@ namespace WindowsFormsApp1
             {
                 if (edit == 0) //Code For SAVE 
                 {
+                    //Here we are link up our data base by using Data Context Method 
+                    //It is responsible for retrival and saving of data
+                    eduvationdbDataContext eduvationdb = new eduvationdbDataContext();
+                    //here the table is come up as a class because we use LINQ method
+                    role r = new role();
+                    r.rl_name = role_textBox.Text;
+                    if (statusDD.SelectedIndex == 0)
+                    {
+                        r.rl_status = 1; //For Active
+                    }
+                    else
+                    {
+                        r.rl_status = 0; //For Inactive
+                    }
+                    eduvationdb.staff_insertRoles(role_textBox.Text, r.rl_status);
+                    //Without this class you could not submit the changes to dbs so it is necessary
+                    eduvationdb.SubmitChanges();
 
+                    MainClass.MSGBox(role_textBox.Text+" Added Successfully.", "Success", "Success");
+                    MainClass.reset_disable(panel6);
                 }
                 else if (edit == 1) //Code For UPDATE
                 {

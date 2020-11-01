@@ -39,6 +39,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.eduvationToolStripMenuItem});
@@ -50,32 +51,35 @@
             // 
             // eduvationToolStripMenuItem
             // 
+            this.eduvationToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.eduvationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sETTINGSToolStripMenuItem,
             this.lOGOUTToolStripMenuItem,
             this.eXITToolStripMenuItem});
+            this.eduvationToolStripMenuItem.ForeColor = System.Drawing.Color.Green;
+            this.eduvationToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eduvationToolStripMenuItem.Image")));
             this.eduvationToolStripMenuItem.Name = "eduvationToolStripMenuItem";
-            this.eduvationToolStripMenuItem.Size = new System.Drawing.Size(74, 29);
+            this.eduvationToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
             this.eduvationToolStripMenuItem.Text = "OPEN";
             // 
             // sETTINGSToolStripMenuItem
             // 
             this.sETTINGSToolStripMenuItem.Name = "sETTINGSToolStripMenuItem";
             this.sETTINGSToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.sETTINGSToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
+            this.sETTINGSToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.sETTINGSToolStripMenuItem.Text = "SETTINGS";
             // 
             // lOGOUTToolStripMenuItem
             // 
             this.lOGOUTToolStripMenuItem.Name = "lOGOUTToolStripMenuItem";
-            this.lOGOUTToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
+            this.lOGOUTToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.lOGOUTToolStripMenuItem.Text = "LOGOUT";
             // 
             // eXITToolStripMenuItem
             // 
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
             this.eXITToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
@@ -92,7 +96,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MDI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Text = "EDUVATION MANAGEMENT SYSTEM";
             this.Load += new System.EventHandler(this.MDI_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

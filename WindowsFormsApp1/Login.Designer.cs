@@ -44,7 +44,7 @@
             // 
             // leftpanel
             // 
-            this.leftpanel.Size = new System.Drawing.Size(342, 681);
+            this.leftpanel.Size = new System.Drawing.Size(342, 715);
             // 
             // panel6
             // 
@@ -55,21 +55,21 @@
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.textBox1);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Size = new System.Drawing.Size(342, 612);
+            this.panel6.Size = new System.Drawing.Size(342, 643);
             // 
             // rightpanel
             // 
-            this.rightpanel.Size = new System.Drawing.Size(1155, 681);
+            this.rightpanel.Size = new System.Drawing.Size(1155, 715);
             // 
             // panel4
             // 
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Size = new System.Drawing.Size(1155, 612);
+            this.panel4.Size = new System.Drawing.Size(1155, 643);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Size = new System.Drawing.Size(1155, 69);
+            this.panel5.Size = new System.Drawing.Size(1155, 72);
             // 
             // label1
             // 
@@ -86,7 +86,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 214);
+            this.label2.Location = new System.Drawing.Point(12, 225);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 28);
             this.label2.TabIndex = 2;
@@ -97,7 +97,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(17, 256);
+            this.textBox1.Location = new System.Drawing.Point(17, 269);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(297, 31);
             this.textBox1.TabIndex = 3;
@@ -105,7 +105,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(17, 344);
+            this.textBox2.Location = new System.Drawing.Point(17, 361);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '•';
             this.textBox2.Size = new System.Drawing.Size(297, 31);
@@ -115,7 +115,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 313);
+            this.label3.Location = new System.Drawing.Point(12, 329);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 28);
             this.label3.TabIndex = 4;
@@ -129,9 +129,9 @@
             this.login_btn.FlatAppearance.BorderSize = 3;
             this.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login_btn.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.login_btn.Location = new System.Drawing.Point(56, 425);
+            this.login_btn.Location = new System.Drawing.Point(56, 446);
             this.login_btn.Name = "login_btn";
-            this.login_btn.Size = new System.Drawing.Size(219, 61);
+            this.login_btn.Size = new System.Drawing.Size(219, 64);
             this.login_btn.TabIndex = 0;
             this.login_btn.Text = "LOGIN";
             this.login_btn.UseVisualStyleBackColor = false;
@@ -143,7 +143,7 @@
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.loginicon1;
             this.pictureBox1.Location = new System.Drawing.Point(77, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(159, 149);
+            this.pictureBox1.Size = new System.Drawing.Size(159, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -152,7 +152,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(106, 152);
+            this.label4.Location = new System.Drawing.Point(106, 160);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 41);
             this.label4.TabIndex = 7;
@@ -162,14 +162,13 @@
             // Login
             // 
             this.AcceptButton = this.login_btn;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1497, 681);
+            this.ClientSize = new System.Drawing.Size(1497, 715);
             this.ControlBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Login";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.leftpanel.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();

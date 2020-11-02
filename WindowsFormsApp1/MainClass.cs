@@ -12,16 +12,6 @@ namespace WindowsFormsApp1
     {
       public static string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
-        //Method for SNO
-        public static void SNo(DataGridView gridview, string colname) 
-        {
-            int count = 0;
-            foreach (DataGridViewRow row in gridview.Rows)
-            {
-                count++;
-                row.Cells[colname].Value = count;
-            }
-        }
         // Method For Open and Close Form Window you have to give three parameters here
         // Opening Win , Closing Win and Parent Win which we also called MDI
 

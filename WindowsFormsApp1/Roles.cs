@@ -40,9 +40,6 @@ namespace WindowsFormsApp1
                 rolestatuserrorlabel.Visible = false;
             }
         }
-        //Here we are link up our data base by using Data Context Method 
-        //It is responsible for retrival and saving of data
-        eduvationdbDataContext eduvationdb = new eduvationdbDataContext();
 
 
         /*Here we will declare a variable edit it has default value
@@ -79,7 +76,9 @@ namespace WindowsFormsApp1
             {
                 if (edit == 0) //Code For SAVE 
                 {
-                    
+                    //Here we are link up our data base by using Data Context Method 
+                    //It is responsible for retrival and saving of data
+                    eduvationdbDataContext eduvationdb = new eduvationdbDataContext();
                     //here the table is come up as a class because we use LINQ method
                     role r = new role();
                     r.rl_name = role_textBox.Text;
@@ -97,27 +96,10 @@ namespace WindowsFormsApp1
 
                     MainClass.MSGBox(role_textBox.Text+" Added Successfully.", "Success", "Success");
                     MainClass.reset_disable(panel6);
-                    loadData();
                 }
                 else if (edit == 1) //Code For UPDATE
                 {
-                    //here the table is come up as a class because we use LINQ method
-                    byte status;
-                    if (statusDD.SelectedIndex == 0)
-                    {
-                        status = 1; //For Active
-                    }
-                    else
-                    {
-                        status = 0; //For Inactive
-                    }
-                    eduvationdb.staff_updateRoles(role_textBox.Text,status,roleID);
-                    //Without this class you could not submit the changes to dbs so it is necessary
-                    eduvationdb.SubmitChanges();
 
-                    MainClass.MSGBox(role_textBox.Text + " Updated Successfully.", "Success", "Success");
-                    MainClass.reset_disable(panel6);
-                    loadData();
 
                 }
             }
@@ -126,56 +108,22 @@ namespace WindowsFormsApp1
 
         public override void delete_btn_Click(object sender, EventArgs e)
         {
-            if (edit == 1)
-            {
-                DialogResult dr = MessageBox.Show("Are You sure you want to delete "+role_textBox.Text+" ?","Confirmation", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-                if (dr == DialogResult.Yes)
-                {
-                    eduvationdb.staff_deleteRoles(roleID);
-                    MainClass.MSGBox(role_textBox.Text + " Deleted Successfully.", "Success", "Success");
-                    MainClass.reset_disable(panel6);
-                    loadData();
 
-                }
-            }
         }
 
         public override void view_btn_Click(object sender, EventArgs e)
         {
-            loadData();
+
         }
 
         public override void search_Txtbox_TextChanged(object sender, EventArgs e)
         {
 
         }
-        private void loadData() 
-        {
-            var result = eduvationdb.staff_viewRoles();
-            roleIdGV.DataPropertyName = "ID";
-            RoleGV.DataPropertyName = "Role";
-            StatusGV.DataPropertyName = "Status";
-            dataGridView1.DataSource = result;
-            MainClass.SNo(dataGridView1, "snoGV");
 
-
-        }
         private void Roles_Load(object sender, EventArgs e)
         {
             MainClass.reset_disable(panel6);
-           
-        }
-        int roleID;
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex != -1 && e.ColumnIndex != -1)
-            {
-                edit = 1;
-                DataGridViewRow gridViewRow = dataGridView1.Rows[e.RowIndex];
-                roleID = Convert.ToInt32(gridViewRow.Cells["roleIDGV"].Value.ToString());
-                role_textBox.Text = gridViewRow.Cells["RoleGV"].Value.ToString();
-                statusDD.SelectedItem = gridViewRow.Cells["StatusGV"].Value.ToString();
-            }
         }
     }
 }

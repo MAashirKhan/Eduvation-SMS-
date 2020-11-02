@@ -259,7 +259,16 @@
     <None Include="Resources\loginicon1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\back_btn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\back_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_btn1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_btn2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back_btn3.png" />
@@ -278,6 +287,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\stafficon %284%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\135-512.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\135-512 %281%29.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\classes.ico" />

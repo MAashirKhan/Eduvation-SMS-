@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
@@ -93,6 +95,11 @@ namespace WindowsFormsApp1
                     Button button = (Button)c;
                     button.Enabled = false;
                 }
+                if (c is PictureBox)
+                {
+                    PictureBox pb = (PictureBox)c;
+                    pb.Image = null;
+                }
             }
         }
 
@@ -181,6 +188,11 @@ namespace WindowsFormsApp1
                     Button button = (Button)c;
                     button.Enabled = true;
                 }
+                if (c is PictureBox)
+                {
+                    PictureBox pb = (PictureBox)c;
+                    pb.Image = null;
+                }
             }
         }
 
@@ -266,7 +278,6 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
     }
 
 }

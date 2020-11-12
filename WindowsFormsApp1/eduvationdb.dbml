@@ -1,10 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Eduvation SMS" Class="eduvationdbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-KQBH18B\SQLEXPRESS;Initial Catalog=&quot;Eduvation SMS&quot;;User ID=eduvation" SettingsObjectName="WindowsFormsApp1.Properties.Settings" SettingsPropertyName="Eduvation_SMSConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-991QFRP\SQLEXPRESS;Initial Catalog=&quot;Eduvation SMS&quot;;Integrated Security=True" SettingsObjectName="WindowsFormsApp1.Properties.Settings" SettingsPropertyName="Eduvation_SMSConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.role" Member="roles">
     <Type Name="role">
       <Column Name="rl_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="rl_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="rl_status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.staff" Member="staffs">
+    <Type Name="staff">
+      <Column Name="staff_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="staff_name" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="staff_username" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="staff_password" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="staff_phone" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="staff_gender" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="staff_role" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="staff_status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="staff_img" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
     </Type>
   </Table>
   <Function Name="dbo.staff_insertRoles" Method="staff_insertRoles">
@@ -28,5 +41,81 @@
   <Function Name="dbo.staff_deleteRoles" Method="staff_deleteRoles">
     <Parameter Name="roleID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.staff_getRoles" Method="staff_getRoles">
+    <ElementType Name="staff_getRolesResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.staff_searchRoles" Method="staff_searchRoles">
+    <Parameter Name="data" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="staff_searchRolesResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.staff_viewStaff" Method="staff_viewStaff">
+    <ElementType Name="staff_viewStaffResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.staff_insertStaffWithoutImage" Method="staff_insertStaffWithoutImage">
+    <Parameter Name="name" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="username" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="phone" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="role" Type="System.Int32" DbType="Int" />
+    <Parameter Name="status" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.staff_insertStaff" Method="staff_insertStaff">
+    <Parameter Name="name" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="username" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="phone" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="role" Type="System.Int32" DbType="Int" />
+    <Parameter Name="status" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="img" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.staff_updatetStaffWithoutImage" Method="staff_updatetStaffWithoutImage">
+    <Parameter Name="name" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="username" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="phone" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="role" Type="System.Int32" DbType="Int" />
+    <Parameter Name="status" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="staffID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.staff_updatetStaff" Method="staff_updatetStaff">
+    <Parameter Name="name" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="username" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="phone" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="role" Type="System.Int32" DbType="Int" />
+    <Parameter Name="status" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="img" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Parameter Name="staffID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.staff_deleteStaff" Method="staff_deleteStaff">
+    <Parameter Name="staffID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.staff_getStaffDetails" Method="staff_getStaffDetails">
+    <ElementType Name="staff_getStaffDetailsResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
 </Database>

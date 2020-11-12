@@ -121,7 +121,6 @@ namespace WindowsFormsApp1
 
                 }
             }
-
         }
 
         public override void delete_btn_Click(object sender, EventArgs e)
@@ -147,19 +146,28 @@ namespace WindowsFormsApp1
 
         public override void search_Txtbox_TextChanged(object sender, EventArgs e)
         {
-
+            searchdata();
         }
         private void loadData() 
         {
             var result = eduvationdb.staff_viewRoles();
             roleIdGV.DataPropertyName = "ID";
+            RoleGV.DataPropertyName = "Role"; 
+            StatusGV.DataPropertyName = "Status";
+            dataGridView1.DataSource = result;
+            MainClass.SNo(dataGridView1, "snoGV");
+        }
+
+        private void searchdata()
+        {
+            var result = eduvationdb.staff_searchRoles(search_Txtbox.Text);
+            roleIdGV.DataPropertyName = "ID";
             RoleGV.DataPropertyName = "Role";
             StatusGV.DataPropertyName = "Status";
             dataGridView1.DataSource = result;
             MainClass.SNo(dataGridView1, "snoGV");
-
-
         }
+
         private void Roles_Load(object sender, EventArgs e)
         {
             MainClass.reset_disable(panel6);

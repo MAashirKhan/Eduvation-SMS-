@@ -71,3 +71,26 @@ D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Subjects.resources
 D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ClassTimings.resources
 D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Shifts.resources
 D:\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SplashScreen.resources
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Classes.resources
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ClassTimings.resources
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Home.resources
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Login.resources
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MDI.resources
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Roles.resources
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sample.resources
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sample2.resources
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Section.resources
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Shifts.resources
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SignUp.resources
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SplashScreen.resources
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Staff.resources
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Subjects.resources
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\Eduvation_Management_System.csproj.GenerateResource.cache
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\Eduvation_Management_System.csproj.CoreCompileInputs.cache
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\Eduvation_Management_System.csprojAssemblyReference.cache

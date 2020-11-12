@@ -33,10 +33,13 @@ namespace WindowsFormsApp1
     partial void Insertrole(role instance);
     partial void Updaterole(role instance);
     partial void Deleterole(role instance);
+    partial void Insertstaff(staff instance);
+    partial void Updatestaff(staff instance);
+    partial void Deletestaff(staff instance);
     #endregion
 		
 		public eduvationdbDataContext() : 
-				base(global::WindowsFormsApp1.Properties.Settings.Default.Eduvation_SMSConnectionString, mappingSource)
+				base(global::WindowsFormsApp1.Properties.Settings.Default.Eduvation_SMSConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -73,6 +76,14 @@ namespace WindowsFormsApp1
 			}
 		}
 		
+		public System.Data.Linq.Table<staff> staffs
+		{
+			get
+			{
+				return this.GetTable<staff>();
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.staff_insertRoles")]
 		public int staff_insertRoles([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> status)
 		{
@@ -99,6 +110,69 @@ namespace WindowsFormsApp1
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), roleID);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.staff_getRoles")]
+		public ISingleResult<staff_getRolesResult> staff_getRoles()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<staff_getRolesResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.staff_searchRoles")]
+		public ISingleResult<staff_searchRolesResult> staff_searchRoles([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string data)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), data);
+			return ((ISingleResult<staff_searchRolesResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.staff_viewStaff")]
+		public ISingleResult<staff_viewStaffResult> staff_viewStaff()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<staff_viewStaffResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.staff_insertStaffWithoutImage")]
+		public int staff_insertStaffWithoutImage([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(40)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(40)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(30)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(15)")] string phone, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> role, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> status)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name, username, password, phone, role, status);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.staff_insertStaff")]
+		public int staff_insertStaff([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(40)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(40)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(30)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(15)")] string phone, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> role, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> status, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Image")] System.Data.Linq.Binary img)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name, username, password, phone, role, status, img);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.staff_updatetStaffWithoutImage")]
+		public int staff_updatetStaffWithoutImage([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(40)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(40)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(30)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(15)")] string phone, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> role, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> status, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> staffID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name, username, password, phone, role, status, staffID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.staff_updatetStaff")]
+		public int staff_updatetStaff([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(40)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(40)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(30)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(15)")] string phone, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> role, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> status, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Image")] System.Data.Linq.Binary img, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> staffID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name, username, password, phone, role, status, img, staffID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.staff_deleteStaff")]
+		public int staff_deleteStaff([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> staffID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), staffID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.staff_getStaffDetails")]
+		public ISingleResult<staff_getStaffDetailsResult> staff_getStaffDetails()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<staff_getStaffDetailsResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -212,6 +286,260 @@ namespace WindowsFormsApp1
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.staff")]
+	public partial class staff : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _staff_id;
+		
+		private string _staff_name;
+		
+		private string _staff_username;
+		
+		private string _staff_password;
+		
+		private string _staff_phone;
+		
+		private byte _staff_gender;
+		
+		private int _staff_role;
+		
+		private byte _staff_status;
+		
+		private System.Data.Linq.Binary _staff_img;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onstaff_idChanging(int value);
+    partial void Onstaff_idChanged();
+    partial void Onstaff_nameChanging(string value);
+    partial void Onstaff_nameChanged();
+    partial void Onstaff_usernameChanging(string value);
+    partial void Onstaff_usernameChanged();
+    partial void Onstaff_passwordChanging(string value);
+    partial void Onstaff_passwordChanged();
+    partial void Onstaff_phoneChanging(string value);
+    partial void Onstaff_phoneChanged();
+    partial void Onstaff_genderChanging(byte value);
+    partial void Onstaff_genderChanged();
+    partial void Onstaff_roleChanging(int value);
+    partial void Onstaff_roleChanged();
+    partial void Onstaff_statusChanging(byte value);
+    partial void Onstaff_statusChanged();
+    partial void Onstaff_imgChanging(System.Data.Linq.Binary value);
+    partial void Onstaff_imgChanged();
+    #endregion
+		
+		public staff()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_staff_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int staff_id
+		{
+			get
+			{
+				return this._staff_id;
+			}
+			set
+			{
+				if ((this._staff_id != value))
+				{
+					this.Onstaff_idChanging(value);
+					this.SendPropertyChanging();
+					this._staff_id = value;
+					this.SendPropertyChanged("staff_id");
+					this.Onstaff_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_staff_name", DbType="VarChar(40) NOT NULL", CanBeNull=false)]
+		public string staff_name
+		{
+			get
+			{
+				return this._staff_name;
+			}
+			set
+			{
+				if ((this._staff_name != value))
+				{
+					this.Onstaff_nameChanging(value);
+					this.SendPropertyChanging();
+					this._staff_name = value;
+					this.SendPropertyChanged("staff_name");
+					this.Onstaff_nameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_staff_username", DbType="VarChar(40) NOT NULL", CanBeNull=false)]
+		public string staff_username
+		{
+			get
+			{
+				return this._staff_username;
+			}
+			set
+			{
+				if ((this._staff_username != value))
+				{
+					this.Onstaff_usernameChanging(value);
+					this.SendPropertyChanging();
+					this._staff_username = value;
+					this.SendPropertyChanged("staff_username");
+					this.Onstaff_usernameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_staff_password", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
+		public string staff_password
+		{
+			get
+			{
+				return this._staff_password;
+			}
+			set
+			{
+				if ((this._staff_password != value))
+				{
+					this.Onstaff_passwordChanging(value);
+					this.SendPropertyChanging();
+					this._staff_password = value;
+					this.SendPropertyChanged("staff_password");
+					this.Onstaff_passwordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_staff_phone", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
+		public string staff_phone
+		{
+			get
+			{
+				return this._staff_phone;
+			}
+			set
+			{
+				if ((this._staff_phone != value))
+				{
+					this.Onstaff_phoneChanging(value);
+					this.SendPropertyChanging();
+					this._staff_phone = value;
+					this.SendPropertyChanged("staff_phone");
+					this.Onstaff_phoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_staff_gender", DbType="TinyInt NOT NULL")]
+		public byte staff_gender
+		{
+			get
+			{
+				return this._staff_gender;
+			}
+			set
+			{
+				if ((this._staff_gender != value))
+				{
+					this.Onstaff_genderChanging(value);
+					this.SendPropertyChanging();
+					this._staff_gender = value;
+					this.SendPropertyChanged("staff_gender");
+					this.Onstaff_genderChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_staff_role", DbType="Int NOT NULL")]
+		public int staff_role
+		{
+			get
+			{
+				return this._staff_role;
+			}
+			set
+			{
+				if ((this._staff_role != value))
+				{
+					this.Onstaff_roleChanging(value);
+					this.SendPropertyChanging();
+					this._staff_role = value;
+					this.SendPropertyChanged("staff_role");
+					this.Onstaff_roleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_staff_status", DbType="TinyInt NOT NULL")]
+		public byte staff_status
+		{
+			get
+			{
+				return this._staff_status;
+			}
+			set
+			{
+				if ((this._staff_status != value))
+				{
+					this.Onstaff_statusChanging(value);
+					this.SendPropertyChanging();
+					this._staff_status = value;
+					this.SendPropertyChanged("staff_status");
+					this.Onstaff_statusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_staff_img", DbType="Image", UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary staff_img
+		{
+			get
+			{
+				return this._staff_img;
+			}
+			set
+			{
+				if ((this._staff_img != value))
+				{
+					this.Onstaff_imgChanging(value);
+					this.SendPropertyChanging();
+					this._staff_img = value;
+					this.SendPropertyChanged("staff_img");
+					this.Onstaff_imgChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	public partial class staff_viewRolesResult
 	{
 		
@@ -253,6 +581,308 @@ namespace WindowsFormsApp1
 				if ((this._Role != value))
 				{
 					this._Role = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="VarChar(9) NOT NULL", CanBeNull=false)]
+		public string Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this._Status = value;
+				}
+			}
+		}
+	}
+	
+	public partial class staff_getRolesResult
+	{
+		
+		private int _ID;
+		
+		private string _Role;
+		
+		public staff_getRolesResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Role", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Role
+		{
+			get
+			{
+				return this._Role;
+			}
+			set
+			{
+				if ((this._Role != value))
+				{
+					this._Role = value;
+				}
+			}
+		}
+	}
+	
+	public partial class staff_searchRolesResult
+	{
+		
+		private int _ID;
+		
+		private string _Role;
+		
+		private string _Status;
+		
+		public staff_searchRolesResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Role", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Role
+		{
+			get
+			{
+				return this._Role;
+			}
+			set
+			{
+				if ((this._Role != value))
+				{
+					this._Role = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="VarChar(9) NOT NULL", CanBeNull=false)]
+		public string Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this._Status = value;
+				}
+			}
+		}
+	}
+	
+	public partial class staff_viewStaffResult
+	{
+		
+		private int _ID;
+		
+		private string _Name;
+		
+		public staff_viewStaffResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(40) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+	}
+	
+	public partial class staff_getStaffDetailsResult
+	{
+		
+		private int _ID;
+		
+		private string _Name;
+		
+		private string _Password;
+		
+		private string _Username;
+		
+		private string _Phone;
+		
+		private string _Role;
+		
+		private int _RoleID;
+		
+		private string _Status;
+		
+		public staff_getStaffDetailsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(40) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this._Password = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="VarChar(40) NOT NULL", CanBeNull=false)]
+		public string Username
+		{
+			get
+			{
+				return this._Username;
+			}
+			set
+			{
+				if ((this._Username != value))
+				{
+					this._Username = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
+		public string Phone
+		{
+			get
+			{
+				return this._Phone;
+			}
+			set
+			{
+				if ((this._Phone != value))
+				{
+					this._Phone = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Role", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Role
+		{
+			get
+			{
+				return this._Role;
+			}
+			set
+			{
+				if ((this._Role != value))
+				{
+					this._Role = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleID", DbType="Int NOT NULL")]
+		public int RoleID
+		{
+			get
+			{
+				return this._RoleID;
+			}
+			set
+			{
+				if ((this._RoleID != value))
+				{
+					this._RoleID = value;
 				}
 			}
 		}

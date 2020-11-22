@@ -45,7 +45,7 @@
             this.eduvationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1478, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1478, 32);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -59,33 +59,34 @@
             this.eduvationToolStripMenuItem.ForeColor = System.Drawing.Color.Green;
             this.eduvationToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eduvationToolStripMenuItem.Image")));
             this.eduvationToolStripMenuItem.Name = "eduvationToolStripMenuItem";
-            this.eduvationToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
+            this.eduvationToolStripMenuItem.Size = new System.Drawing.Size(74, 28);
             this.eduvationToolStripMenuItem.Text = "OPEN";
             // 
             // sETTINGSToolStripMenuItem
             // 
             this.sETTINGSToolStripMenuItem.Name = "sETTINGSToolStripMenuItem";
             this.sETTINGSToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.sETTINGSToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.sETTINGSToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sETTINGSToolStripMenuItem.Text = "SETTINGS";
             // 
             // lOGOUTToolStripMenuItem
             // 
             this.lOGOUTToolStripMenuItem.Name = "lOGOUTToolStripMenuItem";
-            this.lOGOUTToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.lOGOUTToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.lOGOUTToolStripMenuItem.Text = "LOGOUT";
+            this.lOGOUTToolStripMenuItem.Click += new System.EventHandler(this.lOGOUTToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
             this.eXITToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
             // MDI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1478, 681);
             this.Controls.Add(this.menuStrip1);
@@ -110,7 +111,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem eduvationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sETTINGSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lOGOUTToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem lOGOUTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
     }
 }

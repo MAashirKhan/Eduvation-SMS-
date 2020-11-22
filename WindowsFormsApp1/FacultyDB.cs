@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Sample : Form
+    public partial class FacultyDB : Sample
     {
-        public Sample()
+        public FacultyDB()
         {
             InitializeComponent();
-        }
-
-        private void Sample_Load(object sender, EventArgs e)
-        {
-            label2.Text = MainClass.STAFFNAME;
         }
     }
 }

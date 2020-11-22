@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusDD = new System.Windows.Forms.ComboBox();
             this.sectionNameTxt = new System.Windows.Forms.TextBox();
             this.status_label = new System.Windows.Forms.Label();
@@ -49,9 +50,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
+            // search_Txtbox
+            // 
+            this.search_Txtbox.Margin = new System.Windows.Forms.Padding(1);
+            this.search_Txtbox.Size = new System.Drawing.Size(135, 23);
+            // 
             // leftpanel
             // 
-            this.leftpanel.Size = new System.Drawing.Size(342, 742);
+            this.leftpanel.Margin = new System.Windows.Forms.Padding(1);
+            this.leftpanel.Size = new System.Drawing.Size(228, 459);
             // 
             // panel6
             // 
@@ -61,7 +68,8 @@
             this.panel6.Controls.Add(this.sectionName_label);
             this.panel6.Controls.Add(this.statuserror_label);
             this.panel6.Controls.Add(this.sectionnameerror_Label);
-            this.panel6.Size = new System.Drawing.Size(342, 670);
+            this.panel6.Margin = new System.Windows.Forms.Padding(1);
+            this.panel6.Size = new System.Drawing.Size(228, 387);
             this.panel6.Controls.SetChildIndex(this.sectionnameerror_Label, 0);
             this.panel6.Controls.SetChildIndex(this.statuserror_label, 0);
             this.panel6.Controls.SetChildIndex(this.sectionName_label, 0);
@@ -71,56 +79,64 @@
             // 
             // rightpanel
             // 
-            this.rightpanel.Size = new System.Drawing.Size(1257, 742);
+            this.rightpanel.Margin = new System.Windows.Forms.Padding(1);
+            this.rightpanel.Size = new System.Drawing.Size(838, 459);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.groupBox2);
-            this.panel4.Size = new System.Drawing.Size(1257, 670);
+            this.panel4.Margin = new System.Windows.Forms.Padding(1);
+            this.panel4.Size = new System.Drawing.Size(838, 414);
             this.panel4.Controls.SetChildIndex(this.groupBox2, 0);
             // 
             // panel5
             // 
-            this.panel5.Size = new System.Drawing.Size(1257, 72);
+            this.panel5.Margin = new System.Windows.Forms.Padding(1);
+            this.panel5.Size = new System.Drawing.Size(838, 45);
             // 
             // statusDD
             // 
             this.statusDD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.statusDD.Enabled = false;
             this.statusDD.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusDD.FormattingEnabled = true;
             this.statusDD.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.statusDD.Location = new System.Drawing.Point(12, 178);
+            this.statusDD.Location = new System.Drawing.Point(8, 110);
+            this.statusDD.Margin = new System.Windows.Forms.Padding(2);
             this.statusDD.Name = "statusDD";
-            this.statusDD.Size = new System.Drawing.Size(301, 29);
+            this.statusDD.Size = new System.Drawing.Size(202, 21);
             this.statusDD.TabIndex = 71;
             this.statusDD.SelectedIndexChanged += new System.EventHandler(this.statusDD_SelectedIndexChanged);
             // 
             // sectionNameTxt
             // 
-            this.sectionNameTxt.Location = new System.Drawing.Point(12, 109);
+            this.sectionNameTxt.Location = new System.Drawing.Point(8, 67);
+            this.sectionNameTxt.Margin = new System.Windows.Forms.Padding(2);
             this.sectionNameTxt.MaxLength = 30;
             this.sectionNameTxt.Name = "sectionNameTxt";
-            this.sectionNameTxt.Size = new System.Drawing.Size(304, 29);
+            this.sectionNameTxt.Size = new System.Drawing.Size(204, 22);
             this.sectionNameTxt.TabIndex = 70;
             this.sectionNameTxt.TextChanged += new System.EventHandler(this.sectionNameTxt_TextChanged);
             // 
             // status_label
             // 
             this.status_label.AutoSize = true;
-            this.status_label.Location = new System.Drawing.Point(8, 148);
+            this.status_label.Location = new System.Drawing.Point(5, 92);
+            this.status_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.status_label.Name = "status_label";
-            this.status_label.Size = new System.Drawing.Size(55, 21);
+            this.status_label.Size = new System.Drawing.Size(38, 13);
             this.status_label.TabIndex = 69;
             this.status_label.Text = "Status";
             // 
             // sectionName_label
             // 
             this.sectionName_label.AutoSize = true;
-            this.sectionName_label.Location = new System.Drawing.Point(8, 77);
+            this.sectionName_label.Location = new System.Drawing.Point(5, 48);
+            this.sectionName_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sectionName_label.Name = "sectionName_label";
-            this.sectionName_label.Size = new System.Drawing.Size(112, 21);
+            this.sectionName_label.Size = new System.Drawing.Size(77, 13);
             this.sectionName_label.TabIndex = 68;
             this.sectionName_label.Text = "Section Name";
             // 
@@ -129,9 +145,10 @@
             this.statuserror_label.AutoSize = true;
             this.statuserror_label.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statuserror_label.ForeColor = System.Drawing.Color.ForestGreen;
-            this.statuserror_label.Location = new System.Drawing.Point(291, 145);
+            this.statuserror_label.Location = new System.Drawing.Point(194, 90);
+            this.statuserror_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.statuserror_label.Name = "statuserror_label";
-            this.statuserror_label.Size = new System.Drawing.Size(32, 41);
+            this.statuserror_label.Size = new System.Drawing.Size(21, 28);
             this.statuserror_label.TabIndex = 73;
             this.statuserror_label.Text = "*";
             this.statuserror_label.Visible = false;
@@ -141,9 +158,10 @@
             this.sectionnameerror_Label.AutoSize = true;
             this.sectionnameerror_Label.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sectionnameerror_Label.ForeColor = System.Drawing.Color.ForestGreen;
-            this.sectionnameerror_Label.Location = new System.Drawing.Point(294, 75);
+            this.sectionnameerror_Label.Location = new System.Drawing.Point(196, 46);
+            this.sectionnameerror_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sectionnameerror_Label.Name = "sectionnameerror_Label";
-            this.sectionnameerror_Label.Size = new System.Drawing.Size(32, 41);
+            this.sectionnameerror_Label.Size = new System.Drawing.Size(21, 28);
             this.sectionnameerror_Label.TabIndex = 72;
             this.sectionnameerror_Label.Text = "*";
             this.sectionnameerror_Label.Visible = false;
@@ -153,9 +171,11 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(0, 80);
+            this.groupBox2.Location = new System.Drawing.Point(0, 50);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1257, 590);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(838, 364);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Details";
@@ -181,15 +201,26 @@
             this.SectionNameGV,
             this.StatusGV,
             this.SectionIDGV});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 30);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 20);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1251, 557);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(834, 342);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // snoGV
             // 
@@ -198,7 +229,7 @@
             this.snoGV.MinimumWidth = 8;
             this.snoGV.Name = "snoGV";
             this.snoGV.ReadOnly = true;
-            this.snoGV.Width = 89;
+            this.snoGV.Width = 64;
             // 
             // SectionNameGV
             // 
@@ -224,9 +255,10 @@
             // 
             // Section
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1599, 742);
+            this.ClientSize = new System.Drawing.Size(1066, 459);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Section";
             this.Text = "Section";
             this.Load += new System.EventHandler(this.Section_Load);

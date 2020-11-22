@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label10 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.picBox = new System.Windows.Forms.PictureBox();
@@ -59,7 +60,6 @@
             this.mismatchedError_Label = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.browseImageDialog = new System.Windows.Forms.OpenFileDialog();
             this.snoGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roleIDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +70,7 @@
             this.PhoneGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoleGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.browseImageDialog = new System.Windows.Forms.OpenFileDialog();
             this.leftpanel.SuspendLayout();
             this.panel6.SuspendLayout();
             this.rightpanel.SuspendLayout();
@@ -508,6 +509,14 @@
             this.PhoneGV,
             this.RoleGV,
             this.StatusGV});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(2, 20);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
@@ -520,10 +529,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(777, 428);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // browseImageDialog
-            // 
-            this.browseImageDialog.FileName = "browseImageDialog";
             // 
             // snoGV
             // 
@@ -599,6 +604,10 @@
             this.StatusGV.MinimumWidth = 8;
             this.StatusGV.Name = "StatusGV";
             this.StatusGV.ReadOnly = true;
+            // 
+            // browseImageDialog
+            // 
+            this.browseImageDialog.FileName = "browseImageDialog";
             // 
             // Staff
             // 

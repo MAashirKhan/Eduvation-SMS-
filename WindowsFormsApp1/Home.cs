@@ -89,10 +89,5 @@ namespace WindowsFormsApp1
             MainClass.ShowWindow(timings, this, MDI.ActiveForm);
         }
 
-        private void Shifts_Btn_Click(object sender, EventArgs e)
-        {
-            Shifts shift = new Shifts();
-            MainClass.ShowWindow(shift, this, MDI.ActiveForm);
-        }
     }
 }

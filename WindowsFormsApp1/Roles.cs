@@ -134,7 +134,6 @@ namespace WindowsFormsApp1
                     MainClass.MSGBox(role_textBox.Text + " Deleted Successfully.", "Success", "Success");
                     MainClass.reset_disable(panel6);
                     loadData();
-
                 }
             }
         }
@@ -148,6 +147,7 @@ namespace WindowsFormsApp1
         {
             searchdata();
         }
+
         private void loadData() 
         {
             var result = eduvationdb.staff_viewRoles();
@@ -178,7 +178,7 @@ namespace WindowsFormsApp1
         {
             if (e.RowIndex != -1 && e.ColumnIndex != -1)
             {
-                edit = 1;
+                edit = 0;
                 DataGridViewRow gridViewRow = dataGridView1.Rows[e.RowIndex];
                 roleID = Convert.ToInt32(gridViewRow.Cells["roleIDGV"].Value.ToString());
                 role_textBox.Text = gridViewRow.Cells["RoleGV"].Value.ToString();

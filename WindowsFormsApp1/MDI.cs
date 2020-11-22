@@ -44,5 +44,13 @@ namespace WindowsFormsApp1
         {
             Application.Exit();
         }
+
+        private void lOGOUTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login lg = new Login();
+            lg.MdiParent = this;
+            lg.WindowState = FormWindowState.Maximized;
+            lg.Show();
+        }
     }
 }

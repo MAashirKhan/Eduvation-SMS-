@@ -84,7 +84,6 @@ D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsForm
 D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sample2.resources
 D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Section.resources
-D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Shifts.resources
 D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SignUp.resources
 D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SplashScreen.resources
 D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Staff.resources
@@ -94,3 +93,4 @@ D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\Eduvation_M
 D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\Eduvation_Management_System.csprojAssemblyReference.cache
+D:\2nd SEMESTER\OOP PRJECT\Eduvation-SMS-\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FacultyDB.resources

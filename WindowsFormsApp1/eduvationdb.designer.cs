@@ -36,6 +36,21 @@ namespace WindowsFormsApp1
     partial void Insertstaff(staff instance);
     partial void Updatestaff(staff instance);
     partial void Deletestaff(staff instance);
+    partial void Insertsection(section instance);
+    partial void Updatesection(section instance);
+    partial void Deletesection(section instance);
+    partial void Insertclasses(classes instance);
+    partial void Updateclasses(classes instance);
+    partial void Deleteclasses(classes instance);
+    partial void Insertsubject(subject instance);
+    partial void Updatesubject(subject instance);
+    partial void Deletesubject(subject instance);
+    partial void Inserttiming(timing instance);
+    partial void Updatetiming(timing instance);
+    partial void Deletetiming(timing instance);
+    partial void Insertlevel(level instance);
+    partial void Updatelevel(level instance);
+    partial void Deletelevel(level instance);
     #endregion
 		
 		public eduvationdbDataContext() : 
@@ -81,6 +96,46 @@ namespace WindowsFormsApp1
 			get
 			{
 				return this.GetTable<staff>();
+			}
+		}
+		
+		public System.Data.Linq.Table<section> sections
+		{
+			get
+			{
+				return this.GetTable<section>();
+			}
+		}
+		
+		public System.Data.Linq.Table<classes> classes
+		{
+			get
+			{
+				return this.GetTable<classes>();
+			}
+		}
+		
+		public System.Data.Linq.Table<subject> subjects
+		{
+			get
+			{
+				return this.GetTable<subject>();
+			}
+		}
+		
+		public System.Data.Linq.Table<timing> timings
+		{
+			get
+			{
+				return this.GetTable<timing>();
+			}
+		}
+		
+		public System.Data.Linq.Table<level> levels
+		{
+			get
+			{
+				return this.GetTable<level>();
 			}
 		}
 		
@@ -173,6 +228,153 @@ namespace WindowsFormsApp1
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<staff_getStaffDetailsResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_insertSections")]
+		public int st_insertSections([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> status)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name, status);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_updateSections")]
+		public int st_updateSections([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> status, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> secID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name, status, secID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_deleteSection")]
+		public int st_deleteSection([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> secID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), secID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_getSections")]
+		public ISingleResult<st_getSectionsResult> st_getSections()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<st_getSectionsResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_insertClass")]
+		public int st_insertClass([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> status)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name, status);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_getClasses")]
+		public ISingleResult<st_getClassesResult> st_getClasses()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<st_getClassesResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_deleteClass")]
+		public int st_deleteClass([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> clsID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), clsID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_updateClass")]
+		public int st_updateClass([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> status, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> clsID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name, status, clsID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_deleteSubject")]
+		public int st_deleteSubject([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_insertSubject")]
+		public int st_insertSubject([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> classID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name, classID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_updateSubject")]
+		public int st_updateSubject([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> classId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name, classId, id);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_getSubjects")]
+		public ISingleResult<st_getSubjectsResult> st_getSubjects()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<st_getSubjectsResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_getStaffLoginDetails")]
+		public ISingleResult<st_getStaffLoginDetailsResult> st_getStaffLoginDetails([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(40)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(30)")] string password)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password);
+			return ((ISingleResult<st_getStaffLoginDetailsResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_deleteTimings")]
+		public int st_deleteTimings([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_insertTimings")]
+		public int st_insertTimings([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Time")] System.Nullable<System.TimeSpan> from, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Time")] System.Nullable<System.TimeSpan> to, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(9)")] string day, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> classID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name, from, to, day, classID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_updateTimings")]
+		public int st_updateTimings([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Time")] System.Nullable<System.TimeSpan> from, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Time")] System.Nullable<System.TimeSpan> to, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(9)")] string day, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> classID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name, from, to, day, tID, classID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_getTimings")]
+		public ISingleResult<st_getTimingsResult> st_getTimings()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<st_getTimingsResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_getLevel")]
+		public ISingleResult<st_getLevelResult> st_getLevel()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<st_getLevelResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_deleteLevel")]
+		public int st_deleteLevel([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> level_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), level_ID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_insertLevel")]
+		public int st_insertLevel([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> level_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(30)")] string level_name)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), level_ID, level_name);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_updateLevel")]
+		public int st_updateLevel([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> level_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(30)")] string level_name)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), level_ID, level_name);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -515,6 +717,742 @@ namespace WindowsFormsApp1
 					this._staff_img = value;
 					this.SendPropertyChanged("staff_img");
 					this.Onstaff_imgChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.sections")]
+	public partial class section : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _sec_id;
+		
+		private string _sec_name;
+		
+		private byte _sec_status;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onsec_idChanging(int value);
+    partial void Onsec_idChanged();
+    partial void Onsec_nameChanging(string value);
+    partial void Onsec_nameChanged();
+    partial void Onsec_statusChanging(byte value);
+    partial void Onsec_statusChanged();
+    #endregion
+		
+		public section()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sec_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int sec_id
+		{
+			get
+			{
+				return this._sec_id;
+			}
+			set
+			{
+				if ((this._sec_id != value))
+				{
+					this.Onsec_idChanging(value);
+					this.SendPropertyChanging();
+					this._sec_id = value;
+					this.SendPropertyChanged("sec_id");
+					this.Onsec_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sec_name", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string sec_name
+		{
+			get
+			{
+				return this._sec_name;
+			}
+			set
+			{
+				if ((this._sec_name != value))
+				{
+					this.Onsec_nameChanging(value);
+					this.SendPropertyChanging();
+					this._sec_name = value;
+					this.SendPropertyChanged("sec_name");
+					this.Onsec_nameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sec_status", DbType="TinyInt NOT NULL")]
+		public byte sec_status
+		{
+			get
+			{
+				return this._sec_status;
+			}
+			set
+			{
+				if ((this._sec_status != value))
+				{
+					this.Onsec_statusChanging(value);
+					this.SendPropertyChanging();
+					this._sec_status = value;
+					this.SendPropertyChanged("sec_status");
+					this.Onsec_statusChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.classes")]
+	public partial class classes : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _cls_id;
+		
+		private string _cls_name;
+		
+		private byte _cls_status;
+		
+		private EntitySet<subject> _subjects;
+		
+		private EntitySet<timing> _timings;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Oncls_idChanging(int value);
+    partial void Oncls_idChanged();
+    partial void Oncls_nameChanging(string value);
+    partial void Oncls_nameChanged();
+    partial void Oncls_statusChanging(byte value);
+    partial void Oncls_statusChanged();
+    #endregion
+		
+		public classes()
+		{
+			this._subjects = new EntitySet<subject>(new Action<subject>(this.attach_subjects), new Action<subject>(this.detach_subjects));
+			this._timings = new EntitySet<timing>(new Action<timing>(this.attach_timings), new Action<timing>(this.detach_timings));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cls_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int cls_id
+		{
+			get
+			{
+				return this._cls_id;
+			}
+			set
+			{
+				if ((this._cls_id != value))
+				{
+					this.Oncls_idChanging(value);
+					this.SendPropertyChanging();
+					this._cls_id = value;
+					this.SendPropertyChanged("cls_id");
+					this.Oncls_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cls_name", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string cls_name
+		{
+			get
+			{
+				return this._cls_name;
+			}
+			set
+			{
+				if ((this._cls_name != value))
+				{
+					this.Oncls_nameChanging(value);
+					this.SendPropertyChanging();
+					this._cls_name = value;
+					this.SendPropertyChanged("cls_name");
+					this.Oncls_nameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cls_status", DbType="TinyInt NOT NULL")]
+		public byte cls_status
+		{
+			get
+			{
+				return this._cls_status;
+			}
+			set
+			{
+				if ((this._cls_status != value))
+				{
+					this.Oncls_statusChanging(value);
+					this.SendPropertyChanging();
+					this._cls_status = value;
+					this.SendPropertyChanged("cls_status");
+					this.Oncls_statusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="classes_subject", Storage="_subjects", ThisKey="cls_id", OtherKey="sub_classID")]
+		public EntitySet<subject> subjects
+		{
+			get
+			{
+				return this._subjects;
+			}
+			set
+			{
+				this._subjects.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="classes_timing", Storage="_timings", ThisKey="cls_id", OtherKey="t_classID")]
+		public EntitySet<timing> timings
+		{
+			get
+			{
+				return this._timings;
+			}
+			set
+			{
+				this._timings.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_subjects(subject entity)
+		{
+			this.SendPropertyChanging();
+			entity.classes = this;
+		}
+		
+		private void detach_subjects(subject entity)
+		{
+			this.SendPropertyChanging();
+			entity.classes = null;
+		}
+		
+		private void attach_timings(timing entity)
+		{
+			this.SendPropertyChanging();
+			entity.classes = this;
+		}
+		
+		private void detach_timings(timing entity)
+		{
+			this.SendPropertyChanging();
+			entity.classes = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.subjects")]
+	public partial class subject : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _sub_id;
+		
+		private string _sub_name;
+		
+		private System.Nullable<int> _sub_classID;
+		
+		private EntityRef<classes> _classes;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onsub_idChanging(int value);
+    partial void Onsub_idChanged();
+    partial void Onsub_nameChanging(string value);
+    partial void Onsub_nameChanged();
+    partial void Onsub_classIDChanging(System.Nullable<int> value);
+    partial void Onsub_classIDChanged();
+    #endregion
+		
+		public subject()
+		{
+			this._classes = default(EntityRef<classes>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sub_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int sub_id
+		{
+			get
+			{
+				return this._sub_id;
+			}
+			set
+			{
+				if ((this._sub_id != value))
+				{
+					this.Onsub_idChanging(value);
+					this.SendPropertyChanging();
+					this._sub_id = value;
+					this.SendPropertyChanged("sub_id");
+					this.Onsub_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sub_name", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string sub_name
+		{
+			get
+			{
+				return this._sub_name;
+			}
+			set
+			{
+				if ((this._sub_name != value))
+				{
+					this.Onsub_nameChanging(value);
+					this.SendPropertyChanging();
+					this._sub_name = value;
+					this.SendPropertyChanged("sub_name");
+					this.Onsub_nameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sub_classID", DbType="Int")]
+		public System.Nullable<int> sub_classID
+		{
+			get
+			{
+				return this._sub_classID;
+			}
+			set
+			{
+				if ((this._sub_classID != value))
+				{
+					if (this._classes.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onsub_classIDChanging(value);
+					this.SendPropertyChanging();
+					this._sub_classID = value;
+					this.SendPropertyChanged("sub_classID");
+					this.Onsub_classIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="classes_subject", Storage="_classes", ThisKey="sub_classID", OtherKey="cls_id", IsForeignKey=true, DeleteRule="CASCADE")]
+		public classes classes
+		{
+			get
+			{
+				return this._classes.Entity;
+			}
+			set
+			{
+				classes previousValue = this._classes.Entity;
+				if (((previousValue != value) 
+							|| (this._classes.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._classes.Entity = null;
+						previousValue.subjects.Remove(this);
+					}
+					this._classes.Entity = value;
+					if ((value != null))
+					{
+						value.subjects.Add(this);
+						this._sub_classID = value.cls_id;
+					}
+					else
+					{
+						this._sub_classID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("classes");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.timings")]
+	public partial class timing : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _t_id;
+		
+		private string _t_name;
+		
+		private System.TimeSpan _t_fromTime;
+		
+		private System.Nullable<System.TimeSpan> _t_toTime;
+		
+		private string _t_dayName;
+		
+		private System.Nullable<int> _t_classID;
+		
+		private EntityRef<classes> _classes;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Ont_idChanging(int value);
+    partial void Ont_idChanged();
+    partial void Ont_nameChanging(string value);
+    partial void Ont_nameChanged();
+    partial void Ont_fromTimeChanging(System.TimeSpan value);
+    partial void Ont_fromTimeChanged();
+    partial void Ont_toTimeChanging(System.Nullable<System.TimeSpan> value);
+    partial void Ont_toTimeChanged();
+    partial void Ont_dayNameChanging(string value);
+    partial void Ont_dayNameChanged();
+    partial void Ont_classIDChanging(System.Nullable<int> value);
+    partial void Ont_classIDChanged();
+    #endregion
+		
+		public timing()
+		{
+			this._classes = default(EntityRef<classes>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_t_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int t_id
+		{
+			get
+			{
+				return this._t_id;
+			}
+			set
+			{
+				if ((this._t_id != value))
+				{
+					this.Ont_idChanging(value);
+					this.SendPropertyChanging();
+					this._t_id = value;
+					this.SendPropertyChanged("t_id");
+					this.Ont_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_t_name", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string t_name
+		{
+			get
+			{
+				return this._t_name;
+			}
+			set
+			{
+				if ((this._t_name != value))
+				{
+					this.Ont_nameChanging(value);
+					this.SendPropertyChanging();
+					this._t_name = value;
+					this.SendPropertyChanged("t_name");
+					this.Ont_nameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_t_fromTime", DbType="Time NOT NULL")]
+		public System.TimeSpan t_fromTime
+		{
+			get
+			{
+				return this._t_fromTime;
+			}
+			set
+			{
+				if ((this._t_fromTime != value))
+				{
+					this.Ont_fromTimeChanging(value);
+					this.SendPropertyChanging();
+					this._t_fromTime = value;
+					this.SendPropertyChanged("t_fromTime");
+					this.Ont_fromTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_t_toTime", DbType="Time")]
+		public System.Nullable<System.TimeSpan> t_toTime
+		{
+			get
+			{
+				return this._t_toTime;
+			}
+			set
+			{
+				if ((this._t_toTime != value))
+				{
+					this.Ont_toTimeChanging(value);
+					this.SendPropertyChanging();
+					this._t_toTime = value;
+					this.SendPropertyChanged("t_toTime");
+					this.Ont_toTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_t_dayName", DbType="VarChar(9) NOT NULL", CanBeNull=false)]
+		public string t_dayName
+		{
+			get
+			{
+				return this._t_dayName;
+			}
+			set
+			{
+				if ((this._t_dayName != value))
+				{
+					this.Ont_dayNameChanging(value);
+					this.SendPropertyChanging();
+					this._t_dayName = value;
+					this.SendPropertyChanged("t_dayName");
+					this.Ont_dayNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_t_classID", DbType="Int")]
+		public System.Nullable<int> t_classID
+		{
+			get
+			{
+				return this._t_classID;
+			}
+			set
+			{
+				if ((this._t_classID != value))
+				{
+					if (this._classes.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Ont_classIDChanging(value);
+					this.SendPropertyChanging();
+					this._t_classID = value;
+					this.SendPropertyChanged("t_classID");
+					this.Ont_classIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="classes_timing", Storage="_classes", ThisKey="t_classID", OtherKey="cls_id", IsForeignKey=true, DeleteRule="CASCADE")]
+		public classes classes
+		{
+			get
+			{
+				return this._classes.Entity;
+			}
+			set
+			{
+				classes previousValue = this._classes.Entity;
+				if (((previousValue != value) 
+							|| (this._classes.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._classes.Entity = null;
+						previousValue.timings.Remove(this);
+					}
+					this._classes.Entity = value;
+					if ((value != null))
+					{
+						value.timings.Add(this);
+						this._t_classID = value.cls_id;
+					}
+					else
+					{
+						this._t_classID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("classes");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.levels")]
+	public partial class level : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _l_id;
+		
+		private string _l_name;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onl_idChanging(int value);
+    partial void Onl_idChanged();
+    partial void Onl_nameChanging(string value);
+    partial void Onl_nameChanged();
+    #endregion
+		
+		public level()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_l_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int l_id
+		{
+			get
+			{
+				return this._l_id;
+			}
+			set
+			{
+				if ((this._l_id != value))
+				{
+					this.Onl_idChanging(value);
+					this.SendPropertyChanging();
+					this._l_id = value;
+					this.SendPropertyChanged("l_id");
+					this.Onl_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_l_name", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string l_name
+		{
+			get
+			{
+				return this._l_name;
+			}
+			set
+			{
+				if ((this._l_name != value))
+				{
+					this.Onl_nameChanging(value);
+					this.SendPropertyChanging();
+					this._l_name = value;
+					this.SendPropertyChanged("l_name");
+					this.Onl_nameChanged();
 				}
 			}
 		}
@@ -899,6 +1837,486 @@ namespace WindowsFormsApp1
 				if ((this._Status != value))
 				{
 					this._Status = value;
+				}
+			}
+		}
+	}
+	
+	public partial class st_getSectionsResult
+	{
+		
+		private int _ID;
+		
+		private string _Name;
+		
+		private string _Status;
+		
+		public st_getSectionsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="VarChar(9) NOT NULL", CanBeNull=false)]
+		public string Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this._Status = value;
+				}
+			}
+		}
+	}
+	
+	public partial class st_getClassesResult
+	{
+		
+		private int _ID;
+		
+		private string _Name;
+		
+		private string _Status;
+		
+		public st_getClassesResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="VarChar(9) NOT NULL", CanBeNull=false)]
+		public string Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this._Status = value;
+				}
+			}
+		}
+	}
+	
+	public partial class st_getSubjectsResult
+	{
+		
+		private int _ID;
+		
+		private string _Subjects;
+		
+		private int _ClassID;
+		
+		private string _Class;
+		
+		public st_getSubjectsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Subjects", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Subjects
+		{
+			get
+			{
+				return this._Subjects;
+			}
+			set
+			{
+				if ((this._Subjects != value))
+				{
+					this._Subjects = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClassID", DbType="Int NOT NULL")]
+		public int ClassID
+		{
+			get
+			{
+				return this._ClassID;
+			}
+			set
+			{
+				if ((this._ClassID != value))
+				{
+					this._ClassID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Class", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Class
+		{
+			get
+			{
+				return this._Class;
+			}
+			set
+			{
+				if ((this._Class != value))
+				{
+					this._Class = value;
+				}
+			}
+		}
+	}
+	
+	public partial class st_getStaffLoginDetailsResult
+	{
+		
+		private int _Staff_ID;
+		
+		private string _Username;
+		
+		private string _Password;
+		
+		private string _Name;
+		
+		private string _Role;
+		
+		public st_getStaffLoginDetailsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Staff ID]", Storage="_Staff_ID", DbType="Int NOT NULL")]
+		public int Staff_ID
+		{
+			get
+			{
+				return this._Staff_ID;
+			}
+			set
+			{
+				if ((this._Staff_ID != value))
+				{
+					this._Staff_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="VarChar(40) NOT NULL", CanBeNull=false)]
+		public string Username
+		{
+			get
+			{
+				return this._Username;
+			}
+			set
+			{
+				if ((this._Username != value))
+				{
+					this._Username = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this._Password = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(40) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Role", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Role
+		{
+			get
+			{
+				return this._Role;
+			}
+			set
+			{
+				if ((this._Role != value))
+				{
+					this._Role = value;
+				}
+			}
+		}
+	}
+	
+	public partial class st_getTimingsResult
+	{
+		
+		private int _ID;
+		
+		private string _TimingName;
+		
+		private System.TimeSpan _From;
+		
+		private System.Nullable<System.TimeSpan> _To;
+		
+		private string _Day;
+		
+		private System.Nullable<int> _ClassID;
+		
+		private string _Class;
+		
+		public st_getTimingsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TimingName", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string TimingName
+		{
+			get
+			{
+				return this._TimingName;
+			}
+			set
+			{
+				if ((this._TimingName != value))
+				{
+					this._TimingName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[From]", Storage="_From", DbType="Time NOT NULL")]
+		public System.TimeSpan From
+		{
+			get
+			{
+				return this._From;
+			}
+			set
+			{
+				if ((this._From != value))
+				{
+					this._From = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[To]", Storage="_To", DbType="Time")]
+		public System.Nullable<System.TimeSpan> To
+		{
+			get
+			{
+				return this._To;
+			}
+			set
+			{
+				if ((this._To != value))
+				{
+					this._To = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Day", DbType="VarChar(9) NOT NULL", CanBeNull=false)]
+		public string Day
+		{
+			get
+			{
+				return this._Day;
+			}
+			set
+			{
+				if ((this._Day != value))
+				{
+					this._Day = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClassID", DbType="Int")]
+		public System.Nullable<int> ClassID
+		{
+			get
+			{
+				return this._ClassID;
+			}
+			set
+			{
+				if ((this._ClassID != value))
+				{
+					this._ClassID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Class", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Class
+		{
+			get
+			{
+				return this._Class;
+			}
+			set
+			{
+				if ((this._Class != value))
+				{
+					this._Class = value;
+				}
+			}
+		}
+	}
+	
+	public partial class st_getLevelResult
+	{
+		
+		private int _ID;
+		
+		private string _LevelName;
+		
+		public st_getLevelResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LevelName", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string LevelName
+		{
+			get
+			{
+				return this._LevelName;
+			}
+			set
+			{
+				if ((this._LevelName != value))
+				{
+					this._LevelName = value;
 				}
 			}
 		}

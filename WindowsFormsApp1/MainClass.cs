@@ -12,10 +12,77 @@ namespace WindowsFormsApp1
     // Class For Get the path of the Folder
     class MainClass
     {
-      public static string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        eduvationdbDataContext eduvationdb = new eduvationdbDataContext();
+        public static string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+        //Staff Login
+        private static int staffID;
+        private static string staffName;
+        private static string staffRole;
+        //Encapsulation
+        // Set private fields to public by using properties(getter,setter)
+
+        public static int STAFFID
+        {
+            get
+            {
+                return staffID;
+            }
+            private set
+            {
+                staffID = value;
+            }
+        }
+
+        public static string STAFFNAME
+        {
+            get
+            {
+                return staffName;
+            }
+            private set
+            {
+                staffName = value;
+            }
+        }
+
+        public static string STAFFROLE
+        {
+            get
+            {
+                return staffRole;
+            }
+            private set
+            {
+                staffRole = value;
+            }
+        }
+
+        bool check;
+        public bool GetStaffLogin(string username, string password)
+        {
+            var result = eduvationdb.st_getStaffLoginDetails(username, password);
+            foreach (var item in result)
+            {
+                if (item.Name == null || item.Name == "")
+                {
+                    check = false;
+                    break;
+                }
+                else
+                {
+                    check = true;
+                }
+
+                STAFFID = item.Staff_ID;
+                STAFFNAME = item.Name;
+                STAFFROLE = item.Role;
+            }
+            return check;
+        }
 
         //Method for SNO
-        public static void SNo(DataGridView gridview, string colname) 
+        public static void SNo(DataGridView gridview, string colname)
         {
             int count = 0;
             foreach (DataGridViewRow row in gridview.Rows)
@@ -43,7 +110,7 @@ namespace WindowsFormsApp1
         {
             if (type == "Success") // If the message result is success we return this
             {
-                return MessageBox.Show(msg, caption, MessageBoxButtons.OK, MessageBoxIcon.Information );
+                return MessageBox.Show(msg, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else  // If the message result is error then return this
             {
@@ -124,7 +191,7 @@ namespace WindowsFormsApp1
                 {
                     RadioButton radioButton = (RadioButton)c;
                     radioButton.Enabled = false;
-                  
+
                 }
                 if (c is CheckBox)
                 {

@@ -77,6 +77,12 @@
     <Compile Include="Exams.Designer.cs">
       <DependentUpon>Exams.cs</DependentUpon>
     </Compile>
+    <Compile Include="FacultyDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacultyDB.Designer.cs">
+      <DependentUpon>FacultyDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fee_Voucher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,12 +147,6 @@
     <Compile Include="Section.Designer.cs">
       <DependentUpon>Section.cs</DependentUpon>
     </Compile>
-    <Compile Include="Shifts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shifts.Designer.cs">
-      <DependentUpon>Shifts.cs</DependentUpon>
-    </Compile>
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +190,9 @@
     <EmbeddedResource Include="ClassTimings.resx">
       <DependentUpon>ClassTimings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FacultyDB.resx">
+      <DependentUpon>FacultyDB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,9 +218,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Section.resx">
       <DependentUpon>Section.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Shifts.resx">
-      <DependentUpon>Shifts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
